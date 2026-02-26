@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["python", "main_api.py"]
+CMD ["sh", "-c", "python seed_data.py && python main_api.py"]

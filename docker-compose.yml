@@ -20,8 +20,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    environment:
-      - DATABASE_URL=sqlite:///./data/Class_Diagram.db
+    env_file:
+      - .env
     volumes:
       - sqlite_data:/app/data
 
