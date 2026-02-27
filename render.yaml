@@ -21,7 +21,7 @@ services:
       - key: OPENAI_API_KEY
         sync: false          # manually set in Render dashboard
       - key: PYTHON_VERSION
-        value: "3.11"
+        value: "3.11.9"
 
   # ─── Frontend (React + Vite → static site) ────────────────────
   - type: web
