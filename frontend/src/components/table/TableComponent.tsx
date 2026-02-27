@@ -36,6 +36,7 @@ interface Props {
   options?: TableOptions;
   styles?: CSSProperties;
   dataBinding?: Record<string, any>;
+  onRowClick?: (row: any) => void;
 }
 
 const humanize = (value: string): string => {
@@ -78,6 +79,7 @@ export const TableComponent: React.FC<Props> = ({
   options,
   styles,
   dataBinding,
+  onRowClick,
 }) => {
   // Local state for table data
   const [tableData, setTableData] = useState<any[]>(data ?? []);
@@ -1143,7 +1145,7 @@ export const TableComponent: React.FC<Props> = ({
                   onClick={() => {
                     setSelectedRowIndex(actualRowIndex);
                     setSelectedRow(id, row);
-                    console.log(`[TableComponent] Row selected in table ${id}:`, row);
+                    if (onRowClick) onRowClick(row);
                   }}
                   style={{
                     backgroundColor: isSelected

@@ -1,28 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { TableBlock } from "../components/runtime/TableBlock";
+import Layout from "../components/Layout";
+
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 const Contact: React.FC = () => {
+  const navigate = useNavigate();
+  const [showLinkedIn, setShowLinkedIn] = useState(false);
+  const [linkedinUrl, setLinkedinUrl] = useState("");
+  const [creating, setCreating] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleCreateFromLinkedIn = async () => {
+    if (!linkedinUrl.trim()) return;
+    setCreating(true);
+    setError("");
+    try {
+      const token = localStorage.getItem("token");
+      const res = await axios.post(
+        `${API_URL}/contact/create-from-linkedin/`,
+        { linkedin_url: linkedinUrl },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      setShowLinkedIn(false);
+      setLinkedinUrl("");
+      navigate(`/contact/${res.data.contact.id}`);
+    } catch (err: any) {
+      setError(err.response?.data?.detail || "Enrichment failed");
+    }
+    setCreating(false);
+  };
+
   return (
-    <div id="b337220a">
-    <div id="iriwl9" style={{"display": "flex", "height": "100vh", "fontFamily": "Arial, sans-serif", "--chart-color-palette": "default"}}>
-      <nav id="iepvwf" style={{"width": "250px", "background": "linear-gradient(135deg, #4b3c82 0%, #5a3d91 100%)", "color": "white", "padding": "20px", "overflowY": "auto", "display": "flex", "flexDirection": "column", "--chart-color-palette": "default"}}>
-        <h2 id="invxrh" style={{"marginTop": "0", "fontSize": "24px", "marginBottom": "30px", "fontWeight": "bold", "--chart-color-palette": "default"}}>{"NexaCRM"}</h2>
-        <div id="i5dv9j" style={{"display": "flex", "flexDirection": "column", "flex": "1", "--chart-color-palette": "default"}}>
-          <a id="igjvbj" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/">{"Dashboard"}</a>
-          <a id="innotz" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "rgba(255,255,255,0.2)", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/contact">{"Contacts"}</a>
-          <a id="ibyjzp" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/company">{"Companies"}</a>
-          <a id="ionn22" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/opportunity">{"Pipeline"}</a>
-          <a id="id94u7" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/task">{"Tasks"}</a>
-          <a id="isut9f" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/emailtemplate">{"Email Templates"}</a>
+    <Layout>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "10px" }}>
+        <div>
+          <h1 style={{ marginTop: "0", color: "#333", fontSize: "32px", marginBottom: "10px" }}>{"Contacts"}</h1>
+          <p style={{ color: "#666", marginBottom: "0" }}>{"Manage your contacts and track lead scores"}</p>
         </div>
-        <p id="iat7g5" style={{"marginTop": "auto", "paddingTop": "20px", "borderTop": "1px solid rgba(255,255,255,0.2)", "fontSize": "11px", "opacity": "0.8", "textAlign": "center", "--chart-color-palette": "default"}}>{"© 2026 NexaCRM. All rights reserved."}</p>
-      </nav>
-      <main id="il7feg" style={{"flex": "1", "padding": "40px", "overflowY": "auto", "background": "#f5f5f5", "--chart-color-palette": "default"}}>
-        <h1 id="in2it3" style={{"marginTop": "0", "color": "#333", "fontSize": "32px", "marginBottom": "10px", "--chart-color-palette": "default"}}>{"Contacts"}</h1>
-        <p id="ir7qxy" style={{"color": "#666", "marginBottom": "30px", "--chart-color-palette": "default"}}>{"Manage your contacts and track lead scores"}</p>
-        <TableBlock id="table-contact-0" styles={{"width": "100%", "minHeight": "400px", "--chart-color-palette": "default"}} title="Contacts" options={{"showHeader": true, "stripedRows": false, "showPagination": true, "rowsPerPage": 10, "actionButtons": true, "columns": [{"label": "First Name", "column_type": "field", "field": "first_name", "type": "str", "required": true}, {"label": "Last Name", "column_type": "field", "field": "last_name", "type": "str", "required": true}, {"label": "Email", "column_type": "field", "field": "email", "type": "str", "required": true}, {"label": "Job Title", "column_type": "field", "field": "job_title", "type": "str", "required": true}, {"label": "Company", "column_type": "lookup", "path": "company", "entity": "Company", "field": "name", "type": "str", "required": false}, {"label": "Phone", "column_type": "field", "field": "phone", "type": "str", "required": true}, {"label": "Lead Score", "column_type": "field", "field": "lead_score", "type": "int", "required": true}, {"label": "Lead Score Level", "column_type": "field", "field": "lead_score_level", "type": "enum", "options": ["COLD", "HOT", "WARM"], "required": true}, {"label": "Is Enriched", "column_type": "field", "field": "is_enriched", "type": "bool", "required": true}, {"label": "Tags", "column_type": "lookup", "path": "tags", "entity": "Tag", "field": "name", "type": "list", "required": false}], "formColumns": [{"column_type": "field", "field": "updated_at", "label": "updated_at", "type": "datetime", "required": true, "defaultValue": null}, {"column_type": "field", "field": "phone", "label": "phone", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "lead_score_level", "label": "lead_score_level", "type": "enum", "required": true, "defaultValue": "COLD", "options": ["COLD", "HOT", "WARM"]}, {"column_type": "field", "field": "email", "label": "email", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "lead_score", "label": "lead_score", "type": "int", "required": true, "defaultValue": 0}, {"column_type": "field", "field": "last_name", "label": "last_name", "type": "str", "required": true, "defaultValue": null}, {"column_type": "field", "field": "profile_picture_url", "label": "profile_picture_url", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "first_name", "label": "first_name", "type": "str", "required": true, "defaultValue": null}, {"column_type": "field", "field": "created_at", "label": "created_at", "type": "datetime", "required": true, "defaultValue": null}, {"column_type": "field", "field": "linkedin_url", "label": "linkedin_url", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "id", "label": "id", "type": "int", "required": true, "defaultValue": null}, {"column_type": "field", "field": "notes", "label": "notes", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "job_title", "label": "job_title", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "is_enriched", "label": "is_enriched", "type": "bool", "required": true, "defaultValue": false}, {"column_type": "lookup", "path": "company", "field": "company", "lookup_field": "website", "entity": "Company", "type": "str", "required": false}, {"column_type": "lookup", "path": "enrichment_logs", "field": "enrichment_logs", "lookup_field": "id", "entity": "EnrichmentLog", "type": "list", "required": false}, {"column_type": "lookup", "path": "created_by", "field": "created_by", "lookup_field": "last_name", "entity": "User", "type": "str", "required": true}, {"column_type": "lookup", "path": "opportunities", "field": "opportunities", "lookup_field": "expected_close_date", "entity": "Opportunity", "type": "list", "required": false}, {"column_type": "lookup", "path": "generated_emails", "field": "generated_emails", "lookup_field": "created_at", "entity": "GeneratedEmail", "type": "list", "required": false}, {"column_type": "lookup", "path": "tags", "field": "tags", "lookup_field": "name", "entity": "Tag", "type": "list", "required": false}, {"column_type": "lookup", "path": "interactions", "field": "interactions", "lookup_field": "created_at", "entity": "Interaction", "type": "list", "required": false}, {"column_type": "lookup", "path": "tasks", "field": "tasks", "lookup_field": "description", "entity": "Task", "type": "list", "required": false}, {"column_type": "lookup", "path": "score_history", "field": "score_history", "lookup_field": "id", "entity": "ScoreHistory", "type": "list", "required": false}]}} dataBinding={{"entity": "Contact", "endpoint": "/contact/"}} />
-      </main>
-    </div>    </div>
+        <button
+          onClick={() => setShowLinkedIn(!showLinkedIn)}
+          style={{ padding: "10px 20px", borderRadius: "8px", border: "none", background: "#0077b5", color: "white", cursor: "pointer", fontWeight: "bold", fontSize: "14px", display: "flex", alignItems: "center", gap: "6px" }}
+        >
+          + New from LinkedIn
+        </button>
+      </div>
+
+      {showLinkedIn && (
+        <div style={{ background: "white", borderRadius: "8px", padding: "16px", marginBottom: "20px", boxShadow: "0 1px 4px rgba(0,0,0,0.1)" }}>
+          <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+            <input
+              type="text"
+              value={linkedinUrl}
+              onChange={(e) => setLinkedinUrl(e.target.value)}
+              placeholder="https://linkedin.com/in/john-doe"
+              style={{ flex: 1, padding: "10px", borderRadius: "6px", border: "1px solid #ddd", fontSize: "14px" }}
+            />
+            <button
+              onClick={handleCreateFromLinkedIn}
+              disabled={creating}
+              style={{ padding: "10px 20px", borderRadius: "6px", border: "none", background: "#0077b5", color: "white", cursor: "pointer", fontWeight: "bold", whiteSpace: "nowrap" }}
+            >
+              {creating ? "Creating..." : "Create Contact"}
+            </button>
+            <button
+              onClick={() => { setShowLinkedIn(false); setError(""); }}
+              style={{ padding: "10px 14px", borderRadius: "6px", border: "1px solid #ddd", background: "white", cursor: "pointer", color: "#666" }}
+            >
+              Cancel
+            </button>
+          </div>
+          {error && <p style={{ color: "#e74c3c", margin: "8px 0 0", fontSize: "13px" }}>{error}</p>}
+        </div>
+      )}
+
+      <p style={{ color: "#888", fontSize: "13px", marginBottom: "15px", fontStyle: "italic" }}>{"Click a contact row to view details"}</p>
+      <TableBlock id="table-contact-0" onRowClick={(row: any) => navigate(`/contact/${row.id}`)} styles={{"width": "100%", "minHeight": "400px", "--chart-color-palette": "default"}} title="Contacts" options={{"showHeader": true, "stripedRows": false, "showPagination": true, "rowsPerPage": 10, "actionButtons": true, "columns": [{"label": "First Name", "column_type": "field", "field": "first_name", "type": "str", "required": true}, {"label": "Last Name", "column_type": "field", "field": "last_name", "type": "str", "required": true}, {"label": "Email", "column_type": "field", "field": "email", "type": "str", "required": true}, {"label": "Job Title", "column_type": "field", "field": "job_title", "type": "str", "required": true}, {"label": "Company", "column_type": "lookup", "path": "company", "entity": "Company", "field": "name", "type": "str", "required": false}, {"label": "Phone", "column_type": "field", "field": "phone", "type": "str", "required": true}, {"label": "Lead Score", "column_type": "field", "field": "lead_score", "type": "int", "required": true}, {"label": "Lead Score Level", "column_type": "field", "field": "lead_score_level", "type": "enum", "options": ["COLD", "HOT", "WARM"], "required": true}, {"label": "Is Enriched", "column_type": "field", "field": "is_enriched", "type": "bool", "required": true}, {"label": "Tags", "column_type": "lookup", "path": "tags", "entity": "Tag", "field": "name", "type": "list", "required": false}], "formColumns": [{"column_type": "field", "field": "updated_at", "label": "updated_at", "type": "datetime", "required": true, "defaultValue": null}, {"column_type": "field", "field": "phone", "label": "phone", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "lead_score_level", "label": "lead_score_level", "type": "enum", "required": true, "defaultValue": "COLD", "options": ["COLD", "HOT", "WARM"]}, {"column_type": "field", "field": "email", "label": "email", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "lead_score", "label": "lead_score", "type": "int", "required": true, "defaultValue": 0}, {"column_type": "field", "field": "last_name", "label": "last_name", "type": "str", "required": true, "defaultValue": null}, {"column_type": "field", "field": "profile_picture_url", "label": "profile_picture_url", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "first_name", "label": "first_name", "type": "str", "required": true, "defaultValue": null}, {"column_type": "field", "field": "created_at", "label": "created_at", "type": "datetime", "required": true, "defaultValue": null}, {"column_type": "field", "field": "linkedin_url", "label": "linkedin_url", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "id", "label": "id", "type": "int", "required": true, "defaultValue": null}, {"column_type": "field", "field": "notes", "label": "notes", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "job_title", "label": "job_title", "type": "str", "required": false, "defaultValue": null}, {"column_type": "field", "field": "is_enriched", "label": "is_enriched", "type": "bool", "required": true, "defaultValue": false}, {"column_type": "lookup", "path": "company", "field": "company", "lookup_field": "website", "entity": "Company", "type": "str", "required": false}, {"column_type": "lookup", "path": "enrichment_logs", "field": "enrichment_logs", "lookup_field": "id", "entity": "EnrichmentLog", "type": "list", "required": false}, {"column_type": "lookup", "path": "created_by", "field": "created_by", "lookup_field": "last_name", "entity": "User", "type": "str", "required": true}, {"column_type": "lookup", "path": "opportunities", "field": "opportunities", "lookup_field": "expected_close_date", "entity": "Opportunity", "type": "list", "required": false}, {"column_type": "lookup", "path": "generated_emails", "field": "generated_emails", "lookup_field": "created_at", "entity": "GeneratedEmail", "type": "list", "required": false}, {"column_type": "lookup", "path": "tags", "field": "tags", "lookup_field": "name", "entity": "Tag", "type": "list", "required": false}, {"column_type": "lookup", "path": "interactions", "field": "interactions", "lookup_field": "created_at", "entity": "Interaction", "type": "list", "required": false}, {"column_type": "lookup", "path": "tasks", "field": "tasks", "lookup_field": "description", "entity": "Task", "type": "list", "required": false}, {"column_type": "lookup", "path": "score_history", "field": "score_history", "lookup_field": "id", "entity": "ScoreHistory", "type": "list", "required": false}]}} dataBinding={{"entity": "Contact", "endpoint": "/contact/"}} />
+    </Layout>
   );
 };
 

@@ -211,3 +211,35 @@ class TagCreate(BaseModel):
     tagged_companies: List[int]  # N:M Relationship
 
 
+############################################
+# Custom schemas for NexaCRM features
+############################################
+
+class SignupRequest(BaseModel):
+    email: str
+    password: str
+    first_name: str
+    last_name: str
+    role: UserRole = UserRole.SALES_REP
+
+class LoginRequest(BaseModel):
+    email: str
+    password: str
+
+class TokenResponse(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+    user_id: int
+    email: str
+    role: str
+    first_name: str
+    last_name: str
+
+class EnrichRequest(BaseModel):
+    linkedin_url: str
+
+class GenerateEmailRequest(BaseModel):
+    template_id: Optional[int] = None
+    custom_instructions: Optional[str] = None
+
+

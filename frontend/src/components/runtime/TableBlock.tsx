@@ -8,6 +8,7 @@ export interface TableBlockProps {
   options?: Record<string, any>;
   dataBinding?: Record<string, any>;
   styles?: CSSProperties;
+  onRowClick?: (row: any) => void;
 }
 
 const isNestedField = (field?: string): boolean => !!field && field.includes(".");
@@ -18,6 +19,7 @@ export const TableBlock: React.FC<TableBlockProps> = ({
   options,
   dataBinding,
   styles,
+  onRowClick,
 }) => {
   const [tableData, setTableData] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
@@ -77,6 +79,7 @@ export const TableBlock: React.FC<TableBlockProps> = ({
       options={options || {}}
       styles={styles}
       dataBinding={dataBinding}
+      onRowClick={onRowClick}
     />
   );
 };

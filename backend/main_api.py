@@ -184,6 +184,100 @@ def get_db():
 
 ############################################
 #
+#   Authentication endpoints
+#
+############################################
+
+from auth import verify_password, get_password_hash, create_access_token, get_current_user
+from pydantic_classes import SignupRequest, LoginRequest, TokenResponse, EnrichRequest, GenerateEmailRequest
+
+@app.post("/auth/signup", tags=["Auth"])
+async def signup(request: SignupRequest, database: Session = Depends(get_db)):
+    """Register a new user"""
+    try:
+        existing = database.query(User).filter(User.email == request.email).first()
+        if existing:
+            raise HTTPException(status_code=409, detail="Email already registered")
+
+        from datetime import datetime
+        hashed = get_password_hash(request.password)
+        logger.info(f"Signup: hashing succeeded for {request.email}")
+
+        db_user = User(
+            email=request.email,
+            password_hash=hashed,
+            first_name=request.first_name,
+            last_name=request.last_name,
+            role=request.role.value,
+            is_active=True,
+            created_at=datetime.utcnow(),
+        )
+        database.add(db_user)
+        database.commit()
+        database.refresh(db_user)
+        logger.info(f"Signup: user created with id={db_user.id}")
+
+        role_val = db_user.role.value if hasattr(db_user.role, 'value') else str(db_user.role)
+        token = create_access_token({"sub": db_user.id, "email": db_user.email, "role": role_val})
+        return TokenResponse(
+            access_token=token,
+            user_id=db_user.id,
+            email=db_user.email,
+            role=role_val,
+            first_name=db_user.first_name,
+            last_name=db_user.last_name,
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Signup failed: {type(e).__name__}: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Signup error: {type(e).__name__}: {e}")
+
+
+@app.post("/auth/login", tags=["Auth"])
+async def login(request: LoginRequest, database: Session = Depends(get_db)):
+    """Authenticate and return JWT token"""
+    db_user = database.query(User).filter(User.email == request.email).first()
+    if not db_user or not verify_password(request.password, db_user.password_hash):
+        raise HTTPException(status_code=401, detail="Invalid email or password")
+    if not db_user.is_active:
+        raise HTTPException(status_code=403, detail="Account is deactivated")
+
+    from datetime import datetime
+    db_user.last_login = datetime.utcnow()
+    database.commit()
+
+    token = create_access_token({"sub": db_user.id, "email": db_user.email, "role": db_user.role.value if hasattr(db_user.role, 'value') else db_user.role})
+    return TokenResponse(
+        access_token=token,
+        user_id=db_user.id,
+        email=db_user.email,
+        role=db_user.role.value if hasattr(db_user.role, 'value') else db_user.role,
+        first_name=db_user.first_name,
+        last_name=db_user.last_name,
+    )
+
+
+@app.get("/auth/me", tags=["Auth"])
+async def get_me(current_user=Depends(get_current_user), database: Session = Depends(get_db)):
+    """Get current authenticated user info"""
+    if current_user is None:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+    db_user = database.query(User).filter(User.id == current_user["user_id"]).first()
+    if not db_user:
+        raise HTTPException(status_code=404, detail="User not found")
+    return {
+        "id": db_user.id,
+        "email": db_user.email,
+        "first_name": db_user.first_name,
+        "last_name": db_user.last_name,
+        "role": db_user.role.value if hasattr(db_user.role, 'value') else db_user.role,
+        "is_active": db_user.is_active,
+    }
+
+
+############################################
+#
 #   Global API endpoints
 #
 ############################################
@@ -3103,14 +3197,55 @@ def get_paginated_opportunity(skip: int = 0, limit: int = 100, detailed: bool = 
 
 @app.get("/opportunity/search/", response_model=None, tags=["Opportunity"])
 def search_opportunity(
+    stage: str = None,
+    min_value: float = None,
+    max_value: float = None,
+    min_probability: int = None,
+    max_probability: int = None,
+    owner_id: int = None,
     database: Session = Depends(get_db)
 ) -> list:
-    """Search Opportunity entities by attributes"""
+    """Search Opportunity entities by attributes with pipeline filters"""
     query = database.query(Opportunity)
 
+    if stage:
+        stages = [s.strip() for s in stage.split(",")]
+        query = query.filter(Opportunity.stage.in_(stages))
+    if min_value is not None:
+        query = query.filter(Opportunity.value >= min_value)
+    if max_value is not None:
+        query = query.filter(Opportunity.value <= max_value)
+    if min_probability is not None:
+        query = query.filter(Opportunity.probability >= min_probability)
+    if max_probability is not None:
+        query = query.filter(Opportunity.probability <= max_probability)
+    if owner_id is not None:
+        query = query.filter(Opportunity.owner_id == owner_id)
 
     results = query.all()
     return results
+
+
+@app.get("/opportunity/pipeline-summary/", response_model=None, tags=["Opportunity"])
+def get_pipeline_summary(database: Session = Depends(get_db)):
+    """Get per-stage aggregates for the pipeline"""
+    from sqlalchemy import func
+    results = database.query(
+        Opportunity.stage,
+        func.count(Opportunity.id).label("count"),
+        func.coalesce(func.sum(Opportunity.value), 0).label("total_value"),
+        func.coalesce(func.avg(Opportunity.probability), 0).label("avg_probability"),
+    ).group_by(Opportunity.stage).all()
+
+    summary = []
+    for row in results:
+        summary.append({
+            "stage": row.stage.value if hasattr(row.stage, 'value') else row.stage,
+            "count": row.count,
+            "total_value": float(row.total_value),
+            "avg_probability": round(float(row.avg_probability), 1),
+        })
+    return summary
 
 
 @app.get("/opportunity/{opportunity_id}/", response_model=None, tags=["Opportunity"])
@@ -3311,6 +3446,15 @@ async def update_opportunity(opportunity_id: int, opportunity_data: OpportunityC
 
     contact_ids = database.query(opportunity_contact.c.contacts).filter(opportunity_contact.c.opportunities == db_opportunity.id).all()
     tasks_ids = database.query(Task.id).filter(Task.opportunity_id == db_opportunity.id).all()
+
+    # Auto-recalculate lead scores for all contacts in this opportunity
+    try:
+        from scoring_service import recalculate_and_save
+        for cid in contact_ids:
+            recalculate_and_save(cid[0], "Opportunity updated", database)
+    except Exception as e:
+        logger.warning(f"Score recalculation failed after opportunity update: {e}")
+
     response_data = {
         "opportunity": db_opportunity,
         "contact_ids": [x[0] for x in contact_ids],
@@ -3518,8 +3662,12 @@ async def create_interaction(interaction_data: InteractionCreate, database: Sess
     database.commit()
     database.refresh(db_interaction)
 
-
-
+    # Auto-recalculate lead score after new interaction
+    try:
+        from scoring_service import recalculate_and_save
+        recalculate_and_save(interaction_data.contact, "New interaction recorded", database)
+    except Exception as e:
+        logger.warning(f"Score recalculation failed after interaction: {e}")
 
     return db_interaction
 
@@ -4049,6 +4197,333 @@ async def get_tagged_companies_of_tag(tag_id: int, database: Session = Depends(g
 
 
 
+
+
+############################################
+#
+#   Custom NexaCRM Feature Endpoints
+#
+############################################
+
+# --- Contact Detail (Phase 3) ---
+@app.get("/contact/{contact_id}/detail/", response_model=None, tags=["Contact"])
+async def get_contact_detail(contact_id: int, database: Session = Depends(get_db)):
+    """Get full contact detail with all related data"""
+    from sqlalchemy.orm import joinedload
+    db_contact = database.query(Contact).filter(Contact.id == contact_id).first()
+    if not db_contact:
+        raise HTTPException(status_code=404, detail="Contact not found")
+
+    contact_dict = db_contact.__dict__.copy()
+    contact_dict.pop('_sa_instance_state', None)
+
+    # Company
+    company_dict = None
+    if db_contact.company_id:
+        company = database.query(Company).filter(Company.id == db_contact.company_id).first()
+        if company:
+            company_dict = company.__dict__.copy()
+            company_dict.pop('_sa_instance_state', None)
+    contact_dict['company'] = company_dict
+
+    # Interactions sorted by occurred_at desc
+    interactions = database.query(Interaction).filter(
+        Interaction.contact_id == contact_id
+    ).order_by(Interaction.occurred_at.desc()).all()
+    contact_dict['interactions'] = []
+    for ix in interactions:
+        ix_dict = ix.__dict__.copy()
+        ix_dict.pop('_sa_instance_state', None)
+        # Get performer name
+        performer = database.query(User).filter(User.id == ix.performed_by_id).first()
+        if performer:
+            ix_dict['performed_by_name'] = f"{performer.first_name} {performer.last_name}"
+        contact_dict['interactions'].append(ix_dict)
+
+    # Tags
+    tag_ids = database.query(contact_tag.c.tags).filter(contact_tag.c.tagged_contacts == contact_id).all()
+    tags = database.query(Tag).filter(Tag.id.in_([t[0] for t in tag_ids])).all()
+    contact_dict['tags'] = [{"id": t.id, "name": t.name, "color": t.color} for t in tags]
+
+    # Opportunities
+    opp_ids = database.query(opportunity_contact.c.opportunities).filter(
+        opportunity_contact.c.contacts == contact_id
+    ).all()
+    opps = database.query(Opportunity).filter(Opportunity.id.in_([o[0] for o in opp_ids])).all()
+    contact_dict['opportunities'] = []
+    for o in opps:
+        o_dict = o.__dict__.copy()
+        o_dict.pop('_sa_instance_state', None)
+        contact_dict['opportunities'].append(o_dict)
+
+    # Score history
+    scores = database.query(ScoreHistory).filter(
+        ScoreHistory.contact_id == contact_id
+    ).order_by(ScoreHistory.calculated_at.desc()).all()
+    contact_dict['score_history'] = []
+    for s in scores:
+        s_dict = s.__dict__.copy()
+        s_dict.pop('_sa_instance_state', None)
+        contact_dict['score_history'].append(s_dict)
+
+    # Enrichment logs
+    elogs = database.query(EnrichmentLog).filter(
+        EnrichmentLog.contact_id == contact_id
+    ).order_by(EnrichmentLog.enriched_at.desc()).all()
+    contact_dict['enrichment_logs'] = []
+    for e in elogs:
+        e_dict = e.__dict__.copy()
+        e_dict.pop('_sa_instance_state', None)
+        contact_dict['enrichment_logs'].append(e_dict)
+
+    # Generated emails
+    gemails = database.query(GeneratedEmail).filter(
+        GeneratedEmail.contact_id == contact_id
+    ).order_by(GeneratedEmail.created_at.desc()).all()
+    contact_dict['generated_emails'] = []
+    for g in gemails:
+        g_dict = g.__dict__.copy()
+        g_dict.pop('_sa_instance_state', None)
+        contact_dict['generated_emails'].append(g_dict)
+
+    # Tasks
+    tasks = database.query(Task).filter(Task.contact_id == contact_id).all()
+    contact_dict['tasks'] = []
+    for t in tasks:
+        t_dict = t.__dict__.copy()
+        t_dict.pop('_sa_instance_state', None)
+        contact_dict['tasks'].append(t_dict)
+
+    return contact_dict
+
+
+# --- Lead Scoring (Phase 4) ---
+@app.post("/contact/{contact_id}/recalculate-score/", response_model=None, tags=["Contact"])
+async def recalculate_contact_score(contact_id: int, database: Session = Depends(get_db)):
+    """Recalculate lead score for a contact"""
+    from scoring_service import recalculate_and_save
+    db_contact = database.query(Contact).filter(Contact.id == contact_id).first()
+    if not db_contact:
+        raise HTTPException(status_code=404, detail="Contact not found")
+    result = recalculate_and_save(contact_id, "Manual recalculation", database)
+    return result
+
+
+# --- LinkedIn Enrichment (Phase 5) ---
+@app.post("/contact/{contact_id}/enrich/", response_model=None, tags=["Contact"])
+async def enrich_contact(contact_id: int, request: EnrichRequest, database: Session = Depends(get_db)):
+    """Enrich contact data from LinkedIn"""
+    from enrichment_service import enrich_from_linkedin
+    from datetime import datetime
+
+    db_contact = database.query(Contact).filter(Contact.id == contact_id).first()
+    if not db_contact:
+        raise HTTPException(status_code=404, detail="Contact not found")
+
+    result = await enrich_from_linkedin(request.linkedin_url)
+
+    # Create enrichment log
+    elog = EnrichmentLog(
+        contact_id=contact_id,
+        linkedin_url=request.linkedin_url,
+        enriched_at=datetime.utcnow(),
+        is_successful=result["success"],
+        error_message=result.get("error"),
+    )
+    database.add(elog)
+
+    if result["success"]:
+        data = result["data"]
+        if data.get("first_name"):
+            db_contact.first_name = data["first_name"]
+        if data.get("last_name"):
+            db_contact.last_name = data["last_name"]
+        if data.get("job_title"):
+            db_contact.job_title = data["job_title"]
+        if data.get("company_name"):
+            # Link to existing company or create a new one
+            company = database.query(Company).filter(Company.name == data["company_name"]).first()
+            if not company:
+                industry_val = data.get("industry", "OTHER")
+                try:
+                    industry_enum = Industry[industry_val]
+                except KeyError:
+                    industry_enum = Industry.OTHER
+                company = Company(
+                    name=data["company_name"],
+                    industry=industry_enum,
+                    created_at=datetime.utcnow(),
+                    updated_at=datetime.utcnow(),
+                    created_by_id=db_contact.created_by_id,
+                )
+                database.add(company)
+                database.flush()
+            db_contact.company_id = company.id
+        if data.get("profile_picture_url"):
+            db_contact.profile_picture_url = data["profile_picture_url"]
+        db_contact.linkedin_url = request.linkedin_url
+        db_contact.is_enriched = True
+        db_contact.updated_at = datetime.utcnow()
+
+    database.commit()
+    database.refresh(db_contact)
+
+    # Recalculate score after enrichment
+    from scoring_service import recalculate_and_save
+    recalculate_and_save(contact_id, "Post-enrichment recalculation", database)
+
+    contact_dict = db_contact.__dict__.copy()
+    contact_dict.pop('_sa_instance_state', None)
+    return {"enrichment": result, "contact": contact_dict}
+
+
+# --- Create Contact from Enrichment ---
+@app.post("/contact/create-from-linkedin/", response_model=None, tags=["Contact"])
+async def create_contact_from_linkedin(request: EnrichRequest, database: Session = Depends(get_db), current_user=Depends(get_current_user)):
+    """Create a new contact by enriching a LinkedIn URL"""
+    from enrichment_service import enrich_from_linkedin
+    from datetime import datetime
+
+    user_id = current_user["user_id"] if current_user else 1
+
+    result = await enrich_from_linkedin(request.linkedin_url)
+    if not result["success"]:
+        raise HTTPException(status_code=400, detail=result.get("error", "Enrichment failed"))
+
+    data = result["data"]
+
+    # Link to existing company or create a new one
+    company_id = None
+    if data.get("company_name"):
+        company = database.query(Company).filter(Company.name == data["company_name"]).first()
+        if not company:
+            industry_val = data.get("industry", "OTHER")
+            try:
+                industry_enum = Industry[industry_val]
+            except KeyError:
+                industry_enum = Industry.OTHER
+            company = Company(
+                name=data["company_name"],
+                industry=industry_enum,
+                created_at=datetime.utcnow(),
+                updated_at=datetime.utcnow(),
+                created_by_id=user_id,
+            )
+            database.add(company)
+            database.flush()
+        company_id = company.id
+
+    db_contact = Contact(
+        first_name=data.get("first_name", ""),
+        last_name=data.get("last_name", ""),
+        job_title=data.get("job_title", ""),
+        linkedin_url=request.linkedin_url,
+        profile_picture_url=data.get("profile_picture_url", ""),
+        company_id=company_id,
+        is_enriched=True,
+        lead_score=0,
+        lead_score_level=LeadScoreLevel.COLD,
+        created_at=datetime.utcnow(),
+        updated_at=datetime.utcnow(),
+        created_by_id=user_id,
+    )
+    database.add(db_contact)
+    database.commit()
+    database.refresh(db_contact)
+
+    # Create enrichment log
+    elog = EnrichmentLog(
+        contact_id=db_contact.id,
+        linkedin_url=request.linkedin_url,
+        enriched_at=datetime.utcnow(),
+        is_successful=True,
+    )
+    database.add(elog)
+    database.commit()
+    database.refresh(db_contact)
+
+    from fastapi.encoders import jsonable_encoder
+    return {"contact": jsonable_encoder(db_contact), "enrichment": result}
+
+
+# --- Email Generation (Phase 6) ---
+@app.post("/contact/{contact_id}/generate-email/", response_model=None, tags=["Contact"])
+async def generate_email_for_contact(contact_id: int, request: GenerateEmailRequest, database: Session = Depends(get_db)):
+    """Generate a personalized email for a contact using AI"""
+    from email_generation_service import generate_email
+
+    db_contact = database.query(Contact).filter(Contact.id == contact_id).first()
+    if not db_contact:
+        raise HTTPException(status_code=404, detail="Contact not found")
+
+    # Build contact dict
+    contact_info = {
+        "first_name": db_contact.first_name,
+        "last_name": db_contact.last_name,
+        "email": db_contact.email,
+        "job_title": db_contact.job_title,
+        "lead_score_level": db_contact.lead_score_level.value if hasattr(db_contact.lead_score_level, 'value') else db_contact.lead_score_level,
+    }
+    # Get company name
+    if db_contact.company_id:
+        company = database.query(Company).filter(Company.id == db_contact.company_id).first()
+        if company:
+            contact_info["company_name"] = company.name
+
+    # Get recent interactions
+    interactions = database.query(Interaction).filter(
+        Interaction.contact_id == contact_id
+    ).order_by(Interaction.occurred_at.desc()).limit(10).all()
+    ix_list = []
+    for ix in interactions:
+        ix_list.append({
+            "type": ix.type.value if hasattr(ix.type, 'value') else ix.type,
+            "occurred_at": str(ix.occurred_at),
+            "subject": ix.subject,
+            "content": ix.content,
+        })
+
+    # Get template if specified
+    template_dict = None
+    if request.template_id:
+        tmpl = database.query(EmailTemplate).filter(EmailTemplate.id == request.template_id).first()
+        if tmpl:
+            template_dict = {
+                "subject_template": tmpl.subject_template,
+                "body_template": tmpl.body_template,
+            }
+
+    result = await generate_email(contact_info, ix_list, template_dict, request.custom_instructions or "")
+    return result
+
+
+@app.post("/contact/{contact_id}/save-generated-email/", response_model=None, tags=["Contact"])
+async def save_generated_email(contact_id: int, data: dict = Body(...), database: Session = Depends(get_db), current_user=Depends(get_current_user)):
+    """Save a generated email after user review"""
+    from datetime import datetime
+
+    db_contact = database.query(Contact).filter(Contact.id == contact_id).first()
+    if not db_contact:
+        raise HTTPException(status_code=404, detail="Contact not found")
+
+    user_id = current_user["user_id"] if current_user else 1
+
+    ge = GeneratedEmail(
+        contact_id=contact_id,
+        subject=data.get("subject", ""),
+        body=data.get("body", ""),
+        template_id=data.get("template_id"),
+        created_by_id=user_id,
+        created_at=datetime.utcnow(),
+        is_sent=False,
+    )
+    database.add(ge)
+    database.commit()
+    database.refresh(ge)
+
+    ge_dict = ge.__dict__.copy()
+    ge_dict.pop('_sa_instance_state', None)
+    return ge_dict
 
 
 ############################################
