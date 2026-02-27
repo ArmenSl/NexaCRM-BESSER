@@ -27,7 +27,6 @@ services:
   - type: web
     name: nexacrm-app
     runtime: static
-    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: build
