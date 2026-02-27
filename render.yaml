@@ -1,12 +1,14 @@
 # Render Blueprint — NexaCRM
 # https://render.com/docs/blueprint-spec
+#
+# Note: Free tier has no persistent disk — SQLite resets on each deploy.
+# The seed script re-populates demo data on every startup, so this is fine for a demo.
 
 services:
   # ─── Backend (FastAPI + SQLite) ────────────────────────────────
   - type: web
     name: nexacrm-api
     runtime: python
-    region: frankfurt
     plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
@@ -20,16 +22,11 @@ services:
         sync: false          # manually set in Render dashboard
       - key: PYTHON_VERSION
         value: "3.11"
-    disk:
-      name: nexacrm-sqlite
-      mountPath: /opt/render/project/src/data
-      sizeGB: 1
 
   # ─── Frontend (React + Vite → static site) ────────────────────
   - type: web
     name: nexacrm-app
     runtime: static
-    region: frankfurt
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
