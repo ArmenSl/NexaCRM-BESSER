@@ -2,7 +2,7 @@
 
 An AI-powered CRM application **generated entirely by [BESSER](https://github.com/BESSER-PEARL/BESSER)** from a domain model, with no manual modifications. This branch represents the raw output of the BESSER WebApp generator.
 
-> **See also:** The [v2_modified branch](https://github.com/ArmenSl/NexaCRM_RawEditor/tree/v2_modified) extends this generated scaffold with custom features (authentication, AI lead scoring, email generation, and more).
+> **See also:** The [v2_modified branch](https://github.com/ArmenSl/NexaCRM-BESSER/tree/v2_modified) extends this generated scaffold with custom features (authentication, AI lead scoring, email generation, and more).
 
 ## What is this?
 
@@ -26,21 +26,11 @@ This project demonstrates BESSER's code generation capabilities. Starting from a
 
 ## Domain Model
 
-The CRM domain model includes the following entities:
+The application was generated from the following B-UML class diagram, designed in the [BESSER online editor](https://editor.besser-pearl.org/):
 
-- **Contact** — People tracked in the CRM
-- **Company** — Organizations associated with contacts
-- **Opportunity** — Sales pipeline deals
-- **Interaction** — Emails, calls, meetings, notes
-- **Task** — Action items linked to contacts
-- **Tag** — Labels for categorizing contacts
-- **EmailTemplate / GeneratedEmail** — Email management
-- **EnrichmentLog** — Data enrichment tracking
-- **ScoreHistory** — Lead scoring audit trail
-- **User** — CRM users
-- **Dashboard** — Analytics and metrics
+![NexaCRM Class Diagram](INFO/class_diagram.png)
 
-The B-UML model files are available in the [`INFO/`](INFO/) folder.
+The B-UML model files are also available in the [`INFO/`](INFO/) folder.
 
 ## Getting Started
 
