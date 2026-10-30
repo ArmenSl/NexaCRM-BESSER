@@ -1,0 +1,4163 @@
+{
+  "project": {
+    "id": "project_1793360547867_dgeixd2r3",
+    "type": "Project",
+    "name": "NexaCRM-BESSER",
+    "description": "Opened from github.com/ArmenSl/NexaCRM-BESSER",
+    "owner": "ArmenSl",
+    "createdAt": "2026-10-30T11:42:27.867Z",
+    "currentDiagramType": "ClassDiagram",
+    "currentDiagramIndices": {
+      "ClassDiagram": 0,
+      "ObjectDiagram": 0,
+      "StateMachineDiagram": 0,
+      "AgentDiagram": 0,
+      "ComponentDiagram": 0,
+      "DeploymentDiagram": 0,
+      "NNDiagram": 0,
+      "UserDiagram": 0,
+      "GUINoCodeDiagram": 0,
+      "QuantumCircuitDiagram": 0,
+      "BPMN": 0,
+      "KnowledgeGraphDiagram": 0
+    },
+    "diagrams": {
+      "ClassDiagram": [
+        {
+          "id": "class_6a521358",
+          "title": "NexaCRM-BESSER model",
+          "model": {
+            "version": "3.0.0",
+            "type": "ClassDiagram",
+            "size": {
+              "width": 1349.6445617675781,
+              "height": 2060
+            },
+            "interactive": {
+              "elements": {},
+              "relationships": {}
+            },
+            "elements": {
+              "24c5de5e-3079-4f91-9cc7-09cd323d3ac4": {
+                "id": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "name": "Company",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": -590,
+                  "y": -580,
+                  "width": 160,
+                  "height": 430
+                },
+                "attributes": [
+                  "22812033-8d16-4667-a45e-008cf0ca68c6",
+                  "68d856bf-285c-4e98-bfcc-74061f3935d8",
+                  "2b5938cc-0f45-477c-87df-e62fde949a71",
+                  "cdae2a70-376e-4f54-bba0-eb8f4ffc4a8f",
+                  "d32f5413-bc70-4956-b846-f32d668cd00a",
+                  "36cf82c1-f62a-496b-b54f-e7ba1eabb478",
+                  "8535014a-1b43-4c0e-b51b-e79286a62225",
+                  "37a6b1f4-bc87-4e0b-b0a7-074a55ea0bf1",
+                  "0558e252-bf7c-4a5c-b9f9-aaf6e76c8d03",
+                  "f1a66191-fa3d-4506-9195-12794e3a1aaa",
+                  "93a989b9-ff84-4f53-a114-c14f6f507b95",
+                  "c4bf6fed-56e8-4c43-9345-99f033771af9",
+                  "3896bfa5-97d7-4f0b-96e3-eae5d3f620ce"
+                ],
+                "methods": []
+              },
+              "22812033-8d16-4667-a45e-008cf0ca68c6": {
+                "id": "22812033-8d16-4667-a45e-008cf0ca68c6",
+                "name": "address",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -539.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "68d856bf-285c-4e98-bfcc-74061f3935d8": {
+                "id": "68d856bf-285c-4e98-bfcc-74061f3935d8",
+                "name": "city",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -509.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "2b5938cc-0f45-477c-87df-e62fde949a71": {
+                "id": "2b5938cc-0f45-477c-87df-e62fde949a71",
+                "name": "country",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -479.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "cdae2a70-376e-4f54-bba0-eb8f4ffc4a8f": {
+                "id": "cdae2a70-376e-4f54-bba0-eb8f4ffc4a8f",
+                "name": "created_at",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -449.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "d32f5413-bc70-4956-b846-f32d668cd00a": {
+                "id": "d32f5413-bc70-4956-b846-f32d668cd00a",
+                "name": "description",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -419.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "36cf82c1-f62a-496b-b54f-e7ba1eabb478": {
+                "id": "36cf82c1-f62a-496b-b54f-e7ba1eabb478",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -389.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "8535014a-1b43-4c0e-b51b-e79286a62225": {
+                "id": "8535014a-1b43-4c0e-b51b-e79286a62225",
+                "name": "industry",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -359.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "Industry",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "37a6b1f4-bc87-4e0b-b0a7-074a55ea0bf1": {
+                "id": "37a6b1f4-bc87-4e0b-b0a7-074a55ea0bf1",
+                "name": "linkedin_url",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -329.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "0558e252-bf7c-4a5c-b9f9-aaf6e76c8d03": {
+                "id": "0558e252-bf7c-4a5c-b9f9-aaf6e76c8d03",
+                "name": "name",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -299.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "f1a66191-fa3d-4506-9195-12794e3a1aaa": {
+                "id": "f1a66191-fa3d-4506-9195-12794e3a1aaa",
+                "name": "phone",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -269.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "93a989b9-ff84-4f53-a114-c14f6f507b95": {
+                "id": "93a989b9-ff84-4f53-a114-c14f6f507b95",
+                "name": "size",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -239.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "CompanySize",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "c4bf6fed-56e8-4c43-9345-99f033771af9": {
+                "id": "c4bf6fed-56e8-4c43-9345-99f033771af9",
+                "name": "updated_at",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -209.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "3896bfa5-97d7-4f0b-96e3-eae5d3f620ce": {
+                "id": "3896bfa5-97d7-4f0b-96e3-eae5d3f620ce",
+                "name": "website",
+                "type": "ClassAttribute",
+                "owner": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                "bounds": {
+                  "x": -589.5,
+                  "y": -179.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "1d37f061-97cd-4533-9b86-e4bf8e9af00e": {
+                "id": "1d37f061-97cd-4533-9b86-e4bf8e9af00e",
+                "name": "CompanySize",
+                "type": "Enumeration",
+                "owner": null,
+                "bounds": {
+                  "x": -220,
+                  "y": -490,
+                  "width": 160,
+                  "height": 200
+                },
+                "attributes": [
+                  "d01ce9be-d115-45bd-a854-9efb853f75a5",
+                  "b85be9f7-e5c1-43c0-8964-71c81884e2fe",
+                  "6221d2ea-cffb-48f0-966a-b3c8e6d045a9",
+                  "bdd12160-3146-4799-8829-3aca1ff81c95",
+                  "e7482c2c-7aff-4faa-85ac-828cd06d1731"
+                ],
+                "methods": []
+              },
+              "d01ce9be-d115-45bd-a854-9efb853f75a5": {
+                "id": "d01ce9be-d115-45bd-a854-9efb853f75a5",
+                "name": "ENTERPRISE",
+                "type": "ClassAttribute",
+                "owner": "1d37f061-97cd-4533-9b86-e4bf8e9af00e",
+                "bounds": {
+                  "x": -219.5,
+                  "y": -439.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "b85be9f7-e5c1-43c0-8964-71c81884e2fe": {
+                "id": "b85be9f7-e5c1-43c0-8964-71c81884e2fe",
+                "name": "LARGE",
+                "type": "ClassAttribute",
+                "owner": "1d37f061-97cd-4533-9b86-e4bf8e9af00e",
+                "bounds": {
+                  "x": -219.5,
+                  "y": -409.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "6221d2ea-cffb-48f0-966a-b3c8e6d045a9": {
+                "id": "6221d2ea-cffb-48f0-966a-b3c8e6d045a9",
+                "name": "MEDIUM",
+                "type": "ClassAttribute",
+                "owner": "1d37f061-97cd-4533-9b86-e4bf8e9af00e",
+                "bounds": {
+                  "x": -219.5,
+                  "y": -379.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "bdd12160-3146-4799-8829-3aca1ff81c95": {
+                "id": "bdd12160-3146-4799-8829-3aca1ff81c95",
+                "name": "SMALL",
+                "type": "ClassAttribute",
+                "owner": "1d37f061-97cd-4533-9b86-e4bf8e9af00e",
+                "bounds": {
+                  "x": -219.5,
+                  "y": -349.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "e7482c2c-7aff-4faa-85ac-828cd06d1731": {
+                "id": "e7482c2c-7aff-4faa-85ac-828cd06d1731",
+                "name": "STARTUP",
+                "type": "ClassAttribute",
+                "owner": "1d37f061-97cd-4533-9b86-e4bf8e9af00e",
+                "bounds": {
+                  "x": -219.5,
+                  "y": -319.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e": {
+                "id": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "name": "Contact",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": 320,
+                  "y": -510,
+                  "width": 160,
+                  "height": 460
+                },
+                "attributes": [
+                  "5894ec40-c5e9-46db-a870-502c0bbcfdb2",
+                  "d60e0dd7-8526-42cf-bfb4-946c2b4acd11",
+                  "2aa111bb-2a81-4c04-aa30-106bbdfe7ef1",
+                  "b0b6996a-435e-4014-8464-c14203b53a17",
+                  "6a0d0cb6-88d0-4ca4-90fb-e26ca3003927",
+                  "2a9c494d-dc50-479d-bb33-e9dda4b9c09b",
+                  "e25fa415-11fc-4873-9211-774354a4f67f",
+                  "34742db9-c510-468c-a0fb-f8fcf89ee7d8",
+                  "1a1d38eb-bd98-4571-992d-4b3a5e5dbaa3",
+                  "34853b8a-6059-4c8b-b1ee-e81eaf162427",
+                  "5e7d9642-5ef4-4c6b-a128-6e26a89411e9",
+                  "ee5224e7-504c-47f9-ac9f-09ded2cd641b",
+                  "cb35a6e4-8490-409f-a6cc-77d905ece2ef",
+                  "a8c2df67-76fd-4d07-8cfb-428b411c84b8"
+                ],
+                "methods": []
+              },
+              "5894ec40-c5e9-46db-a870-502c0bbcfdb2": {
+                "id": "5894ec40-c5e9-46db-a870-502c0bbcfdb2",
+                "name": "created_at",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -469.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "d60e0dd7-8526-42cf-bfb4-946c2b4acd11": {
+                "id": "d60e0dd7-8526-42cf-bfb4-946c2b4acd11",
+                "name": "email",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -439.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "2aa111bb-2a81-4c04-aa30-106bbdfe7ef1": {
+                "id": "2aa111bb-2a81-4c04-aa30-106bbdfe7ef1",
+                "name": "first_name",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -409.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "b0b6996a-435e-4014-8464-c14203b53a17": {
+                "id": "b0b6996a-435e-4014-8464-c14203b53a17",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -379.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "6a0d0cb6-88d0-4ca4-90fb-e26ca3003927": {
+                "id": "6a0d0cb6-88d0-4ca4-90fb-e26ca3003927",
+                "name": "is_enriched",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -349.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "bool",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "2a9c494d-dc50-479d-bb33-e9dda4b9c09b": {
+                "id": "2a9c494d-dc50-479d-bb33-e9dda4b9c09b",
+                "name": "job_title",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -319.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "e25fa415-11fc-4873-9211-774354a4f67f": {
+                "id": "e25fa415-11fc-4873-9211-774354a4f67f",
+                "name": "last_name",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -289.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "34742db9-c510-468c-a0fb-f8fcf89ee7d8": {
+                "id": "34742db9-c510-468c-a0fb-f8fcf89ee7d8",
+                "name": "lead_score",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -259.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "1a1d38eb-bd98-4571-992d-4b3a5e5dbaa3": {
+                "id": "1a1d38eb-bd98-4571-992d-4b3a5e5dbaa3",
+                "name": "lead_score_level",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -229.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "LeadScoreLevel",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "34853b8a-6059-4c8b-b1ee-e81eaf162427": {
+                "id": "34853b8a-6059-4c8b-b1ee-e81eaf162427",
+                "name": "linkedin_url",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -199.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "5e7d9642-5ef4-4c6b-a128-6e26a89411e9": {
+                "id": "5e7d9642-5ef4-4c6b-a128-6e26a89411e9",
+                "name": "notes",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -169.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "ee5224e7-504c-47f9-ac9f-09ded2cd641b": {
+                "id": "ee5224e7-504c-47f9-ac9f-09ded2cd641b",
+                "name": "phone",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -139.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "cb35a6e4-8490-409f-a6cc-77d905ece2ef": {
+                "id": "cb35a6e4-8490-409f-a6cc-77d905ece2ef",
+                "name": "profile_picture_url",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -109.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "a8c2df67-76fd-4d07-8cfb-428b411c84b8": {
+                "id": "a8c2df67-76fd-4d07-8cfb-428b411c84b8",
+                "name": "updated_at",
+                "type": "ClassAttribute",
+                "owner": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                "bounds": {
+                  "x": 320.5,
+                  "y": -79.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "bb9269c8-4af1-4e11-a0cc-fc896690c6ee": {
+                "id": "bb9269c8-4af1-4e11-a0cc-fc896690c6ee",
+                "name": "EmailTemplate",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": -600,
+                  "y": -100,
+                  "width": 160,
+                  "height": 220
+                },
+                "attributes": [
+                  "8067d50f-b105-4fcb-ba1b-ba55763f35c3",
+                  "35fb1f4d-b8d7-4d8f-b463-0aced2ba1fef",
+                  "ee2b27c1-3804-43f3-98fe-1ab741a9b88a",
+                  "691207bb-c8c7-489b-8025-27390e0ce92b",
+                  "f0a5ae42-0f08-4f66-ac6c-2e02f50830b5",
+                  "7fa3778f-47d7-4f93-950a-926b6110dd86"
+                ],
+                "methods": []
+              },
+              "8067d50f-b105-4fcb-ba1b-ba55763f35c3": {
+                "id": "8067d50f-b105-4fcb-ba1b-ba55763f35c3",
+                "name": "body_template",
+                "type": "ClassAttribute",
+                "owner": "bb9269c8-4af1-4e11-a0cc-fc896690c6ee",
+                "bounds": {
+                  "x": -599.5,
+                  "y": -59.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "35fb1f4d-b8d7-4d8f-b463-0aced2ba1fef": {
+                "id": "35fb1f4d-b8d7-4d8f-b463-0aced2ba1fef",
+                "name": "category",
+                "type": "ClassAttribute",
+                "owner": "bb9269c8-4af1-4e11-a0cc-fc896690c6ee",
+                "bounds": {
+                  "x": -599.5,
+                  "y": -29.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "ee2b27c1-3804-43f3-98fe-1ab741a9b88a": {
+                "id": "ee2b27c1-3804-43f3-98fe-1ab741a9b88a",
+                "name": "created_at",
+                "type": "ClassAttribute",
+                "owner": "bb9269c8-4af1-4e11-a0cc-fc896690c6ee",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 0.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "691207bb-c8c7-489b-8025-27390e0ce92b": {
+                "id": "691207bb-c8c7-489b-8025-27390e0ce92b",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "bb9269c8-4af1-4e11-a0cc-fc896690c6ee",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 30.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "f0a5ae42-0f08-4f66-ac6c-2e02f50830b5": {
+                "id": "f0a5ae42-0f08-4f66-ac6c-2e02f50830b5",
+                "name": "name",
+                "type": "ClassAttribute",
+                "owner": "bb9269c8-4af1-4e11-a0cc-fc896690c6ee",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 60.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "7fa3778f-47d7-4f93-950a-926b6110dd86": {
+                "id": "7fa3778f-47d7-4f93-950a-926b6110dd86",
+                "name": "subject_template",
+                "type": "ClassAttribute",
+                "owner": "bb9269c8-4af1-4e11-a0cc-fc896690c6ee",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 90.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "81ee1836-3bec-4350-862d-a52e77199a03": {
+                "id": "81ee1836-3bec-4350-862d-a52e77199a03",
+                "name": "EnrichmentLog",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": -300,
+                  "y": -100,
+                  "width": 160,
+                  "height": 190
+                },
+                "attributes": [
+                  "3eb66185-0a1b-49a7-8b5e-b6d9e73e8b8a",
+                  "d98e42a9-a69f-43be-b9db-50b33d1b9c82",
+                  "0c369ba0-e42b-4f5a-997c-0b3bebfb0575",
+                  "4ef932c8-ca0d-472c-8008-7a101ad7aca6",
+                  "c8f7212a-f37e-4572-ae8c-aecfc1b5d63f"
+                ],
+                "methods": []
+              },
+              "3eb66185-0a1b-49a7-8b5e-b6d9e73e8b8a": {
+                "id": "3eb66185-0a1b-49a7-8b5e-b6d9e73e8b8a",
+                "name": "enriched_at",
+                "type": "ClassAttribute",
+                "owner": "81ee1836-3bec-4350-862d-a52e77199a03",
+                "bounds": {
+                  "x": -299.5,
+                  "y": -59.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "d98e42a9-a69f-43be-b9db-50b33d1b9c82": {
+                "id": "d98e42a9-a69f-43be-b9db-50b33d1b9c82",
+                "name": "error_message",
+                "type": "ClassAttribute",
+                "owner": "81ee1836-3bec-4350-862d-a52e77199a03",
+                "bounds": {
+                  "x": -299.5,
+                  "y": -29.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "0c369ba0-e42b-4f5a-997c-0b3bebfb0575": {
+                "id": "0c369ba0-e42b-4f5a-997c-0b3bebfb0575",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "81ee1836-3bec-4350-862d-a52e77199a03",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 0.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "4ef932c8-ca0d-472c-8008-7a101ad7aca6": {
+                "id": "4ef932c8-ca0d-472c-8008-7a101ad7aca6",
+                "name": "is_successful",
+                "type": "ClassAttribute",
+                "owner": "81ee1836-3bec-4350-862d-a52e77199a03",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 30.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "bool",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "c8f7212a-f37e-4572-ae8c-aecfc1b5d63f": {
+                "id": "c8f7212a-f37e-4572-ae8c-aecfc1b5d63f",
+                "name": "linkedin_url",
+                "type": "ClassAttribute",
+                "owner": "81ee1836-3bec-4350-862d-a52e77199a03",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 60.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "1a2d9a22-4389-4145-a9b7-431072f61ee1": {
+                "id": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                "name": "GeneratedEmail",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": 0,
+                  "y": -100,
+                  "width": 160,
+                  "height": 220
+                },
+                "attributes": [
+                  "99063391-bcbb-4821-8436-b66ec104d3dd",
+                  "af9a752b-40bf-4236-ab18-c4a02c612e2f",
+                  "9ad66253-8464-47c3-9a7f-9295904e12da",
+                  "02bcdaa4-6db2-48bb-b725-7852b60fb313",
+                  "a5c81138-a8bd-4df9-8b0b-b99df843624a",
+                  "1392c14b-47e3-4626-a2ba-c3888e55acc4"
+                ],
+                "methods": []
+              },
+              "99063391-bcbb-4821-8436-b66ec104d3dd": {
+                "id": "99063391-bcbb-4821-8436-b66ec104d3dd",
+                "name": "body",
+                "type": "ClassAttribute",
+                "owner": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                "bounds": {
+                  "x": 0.5,
+                  "y": -59.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "af9a752b-40bf-4236-ab18-c4a02c612e2f": {
+                "id": "af9a752b-40bf-4236-ab18-c4a02c612e2f",
+                "name": "created_at",
+                "type": "ClassAttribute",
+                "owner": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                "bounds": {
+                  "x": 0.5,
+                  "y": -29.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "9ad66253-8464-47c3-9a7f-9295904e12da": {
+                "id": "9ad66253-8464-47c3-9a7f-9295904e12da",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 0.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "02bcdaa4-6db2-48bb-b725-7852b60fb313": {
+                "id": "02bcdaa4-6db2-48bb-b725-7852b60fb313",
+                "name": "is_sent",
+                "type": "ClassAttribute",
+                "owner": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 30.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "bool",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "a5c81138-a8bd-4df9-8b0b-b99df843624a": {
+                "id": "a5c81138-a8bd-4df9-8b0b-b99df843624a",
+                "name": "sent_at",
+                "type": "ClassAttribute",
+                "owner": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 60.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "1392c14b-47e3-4626-a2ba-c3888e55acc4": {
+                "id": "1392c14b-47e3-4626-a2ba-c3888e55acc4",
+                "name": "subject",
+                "type": "ClassAttribute",
+                "owner": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 90.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "c21e7129-2e1c-4855-aff7-608a68b9cc65": {
+                "id": "c21e7129-2e1c-4855-aff7-608a68b9cc65",
+                "name": "Industry",
+                "type": "Enumeration",
+                "owner": null,
+                "bounds": {
+                  "x": -600,
+                  "y": 100,
+                  "width": 160,
+                  "height": 260
+                },
+                "attributes": [
+                  "1b9b9d12-8327-4d14-a769-34104dd05cef",
+                  "217adb69-35bf-4aa1-ab81-7f6bc2d5faa0",
+                  "b78d0efd-a6dc-4242-8e63-f25ab544a987",
+                  "50bd2362-43e9-4919-9fb1-fc7e8ab30ef3",
+                  "ee83dee5-b6b4-4853-9497-e14f4472acae",
+                  "e8ddf11c-9bf1-49a8-b920-475605d33677",
+                  "9e1a78b0-d61b-46fa-a23e-53db886dd0ac"
+                ],
+                "methods": []
+              },
+              "1b9b9d12-8327-4d14-a769-34104dd05cef": {
+                "id": "1b9b9d12-8327-4d14-a769-34104dd05cef",
+                "name": "FINANCE",
+                "type": "ClassAttribute",
+                "owner": "c21e7129-2e1c-4855-aff7-608a68b9cc65",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 150.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "217adb69-35bf-4aa1-ab81-7f6bc2d5faa0": {
+                "id": "217adb69-35bf-4aa1-ab81-7f6bc2d5faa0",
+                "name": "HEALTHCARE",
+                "type": "ClassAttribute",
+                "owner": "c21e7129-2e1c-4855-aff7-608a68b9cc65",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 180.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "b78d0efd-a6dc-4242-8e63-f25ab544a987": {
+                "id": "b78d0efd-a6dc-4242-8e63-f25ab544a987",
+                "name": "MANUFACTURING",
+                "type": "ClassAttribute",
+                "owner": "c21e7129-2e1c-4855-aff7-608a68b9cc65",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 210.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "50bd2362-43e9-4919-9fb1-fc7e8ab30ef3": {
+                "id": "50bd2362-43e9-4919-9fb1-fc7e8ab30ef3",
+                "name": "OTHER",
+                "type": "ClassAttribute",
+                "owner": "c21e7129-2e1c-4855-aff7-608a68b9cc65",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 240.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "ee83dee5-b6b4-4853-9497-e14f4472acae": {
+                "id": "ee83dee5-b6b4-4853-9497-e14f4472acae",
+                "name": "RETAIL",
+                "type": "ClassAttribute",
+                "owner": "c21e7129-2e1c-4855-aff7-608a68b9cc65",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 270.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "e8ddf11c-9bf1-49a8-b920-475605d33677": {
+                "id": "e8ddf11c-9bf1-49a8-b920-475605d33677",
+                "name": "SERVICES",
+                "type": "ClassAttribute",
+                "owner": "c21e7129-2e1c-4855-aff7-608a68b9cc65",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 300.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "9e1a78b0-d61b-46fa-a23e-53db886dd0ac": {
+                "id": "9e1a78b0-d61b-46fa-a23e-53db886dd0ac",
+                "name": "TECHNOLOGY",
+                "type": "ClassAttribute",
+                "owner": "c21e7129-2e1c-4855-aff7-608a68b9cc65",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 330.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "95b5e4c7-4914-44e9-af2f-ada43a94153b": {
+                "id": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                "name": "Interaction",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": -300,
+                  "y": 100,
+                  "width": 160,
+                  "height": 250
+                },
+                "attributes": [
+                  "e136dbfb-6b2e-443c-88a1-bd6446610c2a",
+                  "467f283f-da43-4337-9a2c-e8a07596cc0b",
+                  "0f8ff705-25ee-4610-9c7e-1affe0200461",
+                  "7dd04206-6bb8-47fa-bb66-008aab61414f",
+                  "7aa209a0-2650-4969-83a5-5c824f74417b",
+                  "15767222-5a28-4141-abc6-f1deec6496e6",
+                  "c17f7f2e-632c-48dc-82b5-c1858677ffc0"
+                ],
+                "methods": []
+              },
+              "e136dbfb-6b2e-443c-88a1-bd6446610c2a": {
+                "id": "e136dbfb-6b2e-443c-88a1-bd6446610c2a",
+                "name": "content",
+                "type": "ClassAttribute",
+                "owner": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 140.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "467f283f-da43-4337-9a2c-e8a07596cc0b": {
+                "id": "467f283f-da43-4337-9a2c-e8a07596cc0b",
+                "name": "created_at",
+                "type": "ClassAttribute",
+                "owner": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 170.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "0f8ff705-25ee-4610-9c7e-1affe0200461": {
+                "id": "0f8ff705-25ee-4610-9c7e-1affe0200461",
+                "name": "direction",
+                "type": "ClassAttribute",
+                "owner": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 200.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "InteractionDirection",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "7dd04206-6bb8-47fa-bb66-008aab61414f": {
+                "id": "7dd04206-6bb8-47fa-bb66-008aab61414f",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 230.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "7aa209a0-2650-4969-83a5-5c824f74417b": {
+                "id": "7aa209a0-2650-4969-83a5-5c824f74417b",
+                "name": "occurred_at",
+                "type": "ClassAttribute",
+                "owner": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 260.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "15767222-5a28-4141-abc6-f1deec6496e6": {
+                "id": "15767222-5a28-4141-abc6-f1deec6496e6",
+                "name": "subject",
+                "type": "ClassAttribute",
+                "owner": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 290.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "c17f7f2e-632c-48dc-82b5-c1858677ffc0": {
+                "id": "c17f7f2e-632c-48dc-82b5-c1858677ffc0",
+                "name": "type",
+                "type": "ClassAttribute",
+                "owner": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 320.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "InteractionType",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "f892db0f-0b1d-4fc4-baaa-accc66cccbc3": {
+                "id": "f892db0f-0b1d-4fc4-baaa-accc66cccbc3",
+                "name": "InteractionDirection",
+                "type": "Enumeration",
+                "owner": null,
+                "bounds": {
+                  "x": 0,
+                  "y": 100,
+                  "width": 160,
+                  "height": 110
+                },
+                "attributes": [
+                  "8cd7f7fa-d901-4d82-8dad-9127b99e338a",
+                  "a25e2663-db83-4eb4-a4f0-8d419f28293a"
+                ],
+                "methods": []
+              },
+              "8cd7f7fa-d901-4d82-8dad-9127b99e338a": {
+                "id": "8cd7f7fa-d901-4d82-8dad-9127b99e338a",
+                "name": "INBOUND",
+                "type": "ClassAttribute",
+                "owner": "f892db0f-0b1d-4fc4-baaa-accc66cccbc3",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 150.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "a25e2663-db83-4eb4-a4f0-8d419f28293a": {
+                "id": "a25e2663-db83-4eb4-a4f0-8d419f28293a",
+                "name": "OUTBOUND",
+                "type": "ClassAttribute",
+                "owner": "f892db0f-0b1d-4fc4-baaa-accc66cccbc3",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 180.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "d6cd37f3-5b22-4b7a-94c3-954d8b4701f4": {
+                "id": "d6cd37f3-5b22-4b7a-94c3-954d8b4701f4",
+                "name": "InteractionType",
+                "type": "Enumeration",
+                "owner": null,
+                "bounds": {
+                  "x": -600,
+                  "y": 300,
+                  "width": 160,
+                  "height": 170
+                },
+                "attributes": [
+                  "d1a36889-ab7c-4bc2-8962-c30513bfc4c0",
+                  "44454a83-6df3-4fa7-8022-88f838fd7cae",
+                  "d6f61af2-80ae-41f3-ae99-7b0e593d3cf7",
+                  "1dd42481-6daa-4a0e-a53a-85b3c9b1a22a"
+                ],
+                "methods": []
+              },
+              "d1a36889-ab7c-4bc2-8962-c30513bfc4c0": {
+                "id": "d1a36889-ab7c-4bc2-8962-c30513bfc4c0",
+                "name": "CALL",
+                "type": "ClassAttribute",
+                "owner": "d6cd37f3-5b22-4b7a-94c3-954d8b4701f4",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 350.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "44454a83-6df3-4fa7-8022-88f838fd7cae": {
+                "id": "44454a83-6df3-4fa7-8022-88f838fd7cae",
+                "name": "EMAIL",
+                "type": "ClassAttribute",
+                "owner": "d6cd37f3-5b22-4b7a-94c3-954d8b4701f4",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 380.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "d6f61af2-80ae-41f3-ae99-7b0e593d3cf7": {
+                "id": "d6f61af2-80ae-41f3-ae99-7b0e593d3cf7",
+                "name": "MEETING",
+                "type": "ClassAttribute",
+                "owner": "d6cd37f3-5b22-4b7a-94c3-954d8b4701f4",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 410.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "1dd42481-6daa-4a0e-a53a-85b3c9b1a22a": {
+                "id": "1dd42481-6daa-4a0e-a53a-85b3c9b1a22a",
+                "name": "NOTE",
+                "type": "ClassAttribute",
+                "owner": "d6cd37f3-5b22-4b7a-94c3-954d8b4701f4",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 440.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "b92adcc7-32e4-4462-a77a-b8193b8a1b07": {
+                "id": "b92adcc7-32e4-4462-a77a-b8193b8a1b07",
+                "name": "LeadScoreLevel",
+                "type": "Enumeration",
+                "owner": null,
+                "bounds": {
+                  "x": -300,
+                  "y": 300,
+                  "width": 160,
+                  "height": 140
+                },
+                "attributes": [
+                  "a29bbda3-4e9a-41ec-8e0b-9fb34899a568",
+                  "eb93207d-4db1-49f3-8074-314cbd290ae3",
+                  "70abe4f0-f39f-48b0-94d0-fff6dbb4e1c8"
+                ],
+                "methods": []
+              },
+              "a29bbda3-4e9a-41ec-8e0b-9fb34899a568": {
+                "id": "a29bbda3-4e9a-41ec-8e0b-9fb34899a568",
+                "name": "COLD",
+                "type": "ClassAttribute",
+                "owner": "b92adcc7-32e4-4462-a77a-b8193b8a1b07",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 350.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "eb93207d-4db1-49f3-8074-314cbd290ae3": {
+                "id": "eb93207d-4db1-49f3-8074-314cbd290ae3",
+                "name": "HOT",
+                "type": "ClassAttribute",
+                "owner": "b92adcc7-32e4-4462-a77a-b8193b8a1b07",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 380.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "70abe4f0-f39f-48b0-94d0-fff6dbb4e1c8": {
+                "id": "70abe4f0-f39f-48b0-94d0-fff6dbb4e1c8",
+                "name": "WARM",
+                "type": "ClassAttribute",
+                "owner": "b92adcc7-32e4-4462-a77a-b8193b8a1b07",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 410.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a": {
+                "id": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "name": "Opportunity",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": 0,
+                  "y": 300,
+                  "width": 160,
+                  "height": 340
+                },
+                "attributes": [
+                  "1ea9e864-c8cd-4906-8e6c-82ad6ba6e933",
+                  "cc922e9e-a18f-4bbc-81f8-a524546f5c9b",
+                  "c9678507-f565-4d16-bb76-ce49fd9801c0",
+                  "ca5eb70a-a3a3-49c2-ab87-1f6288d33e97",
+                  "dd00c8ee-6cff-4207-b5ad-69fe33bbee3d",
+                  "c2513510-8755-4741-88ea-fa9ac5201561",
+                  "be69f179-1864-40f0-8ce2-3f54f138e0ba",
+                  "437bd32d-83f5-4153-b5ad-516557a66d4d",
+                  "fc470613-d7b5-41d6-8ca0-dfedd0d5f5b5",
+                  "057e556d-da7c-4b5f-9e65-07cc5c5284dd"
+                ],
+                "methods": []
+              },
+              "1ea9e864-c8cd-4906-8e6c-82ad6ba6e933": {
+                "id": "1ea9e864-c8cd-4906-8e6c-82ad6ba6e933",
+                "name": "closed_at",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 340.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "cc922e9e-a18f-4bbc-81f8-a524546f5c9b": {
+                "id": "cc922e9e-a18f-4bbc-81f8-a524546f5c9b",
+                "name": "created_at",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 370.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "c9678507-f565-4d16-bb76-ce49fd9801c0": {
+                "id": "c9678507-f565-4d16-bb76-ce49fd9801c0",
+                "name": "description",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 400.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "ca5eb70a-a3a3-49c2-ab87-1f6288d33e97": {
+                "id": "ca5eb70a-a3a3-49c2-ab87-1f6288d33e97",
+                "name": "expected_close_date",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 430.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "date",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "dd00c8ee-6cff-4207-b5ad-69fe33bbee3d": {
+                "id": "dd00c8ee-6cff-4207-b5ad-69fe33bbee3d",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 460.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "c2513510-8755-4741-88ea-fa9ac5201561": {
+                "id": "c2513510-8755-4741-88ea-fa9ac5201561",
+                "name": "probability",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 490.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "be69f179-1864-40f0-8ce2-3f54f138e0ba": {
+                "id": "be69f179-1864-40f0-8ce2-3f54f138e0ba",
+                "name": "stage",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 520.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "OpportunityStage",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "437bd32d-83f5-4153-b5ad-516557a66d4d": {
+                "id": "437bd32d-83f5-4153-b5ad-516557a66d4d",
+                "name": "title",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 550.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "fc470613-d7b5-41d6-8ca0-dfedd0d5f5b5": {
+                "id": "fc470613-d7b5-41d6-8ca0-dfedd0d5f5b5",
+                "name": "updated_at",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 580.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "057e556d-da7c-4b5f-9e65-07cc5c5284dd": {
+                "id": "057e556d-da7c-4b5f-9e65-07cc5c5284dd",
+                "name": "value",
+                "type": "ClassAttribute",
+                "owner": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 610.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "float",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "395e1fa1-2d46-4d50-8bb5-7219d91af606": {
+                "id": "395e1fa1-2d46-4d50-8bb5-7219d91af606",
+                "name": "OpportunityStage",
+                "type": "Enumeration",
+                "owner": null,
+                "bounds": {
+                  "x": -600,
+                  "y": 500,
+                  "width": 160,
+                  "height": 230
+                },
+                "attributes": [
+                  "10df5c74-d972-4f1a-ad31-7ce576a35aee",
+                  "ac43324b-19c0-4e75-af39-985f14177942",
+                  "0a45c3ef-c97f-4015-bfb4-e27510f4208d",
+                  "14f9e59e-2148-4b8c-82cb-ad6e7f8a98a3",
+                  "f10b0557-57cd-4083-be8c-2026a19b96a3",
+                  "922c16a6-03a3-4b76-9e83-d113c40d47f4"
+                ],
+                "methods": []
+              },
+              "10df5c74-d972-4f1a-ad31-7ce576a35aee": {
+                "id": "10df5c74-d972-4f1a-ad31-7ce576a35aee",
+                "name": "CLOSED_LOST",
+                "type": "ClassAttribute",
+                "owner": "395e1fa1-2d46-4d50-8bb5-7219d91af606",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 550.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "ac43324b-19c0-4e75-af39-985f14177942": {
+                "id": "ac43324b-19c0-4e75-af39-985f14177942",
+                "name": "CLOSED_WON",
+                "type": "ClassAttribute",
+                "owner": "395e1fa1-2d46-4d50-8bb5-7219d91af606",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 580.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "0a45c3ef-c97f-4015-bfb4-e27510f4208d": {
+                "id": "0a45c3ef-c97f-4015-bfb4-e27510f4208d",
+                "name": "NEGOTIATION",
+                "type": "ClassAttribute",
+                "owner": "395e1fa1-2d46-4d50-8bb5-7219d91af606",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 610.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "14f9e59e-2148-4b8c-82cb-ad6e7f8a98a3": {
+                "id": "14f9e59e-2148-4b8c-82cb-ad6e7f8a98a3",
+                "name": "PROPOSAL",
+                "type": "ClassAttribute",
+                "owner": "395e1fa1-2d46-4d50-8bb5-7219d91af606",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 640.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "f10b0557-57cd-4083-be8c-2026a19b96a3": {
+                "id": "f10b0557-57cd-4083-be8c-2026a19b96a3",
+                "name": "PROSPECTING",
+                "type": "ClassAttribute",
+                "owner": "395e1fa1-2d46-4d50-8bb5-7219d91af606",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 670.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "922c16a6-03a3-4b76-9e83-d113c40d47f4": {
+                "id": "922c16a6-03a3-4b76-9e83-d113c40d47f4",
+                "name": "QUALIFICATION",
+                "type": "ClassAttribute",
+                "owner": "395e1fa1-2d46-4d50-8bb5-7219d91af606",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 700.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "2872cb2e-b5fe-4078-9c9e-d865914088b0": {
+                "id": "2872cb2e-b5fe-4078-9c9e-d865914088b0",
+                "name": "ScoreHistory",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": -300,
+                  "y": 500,
+                  "width": 160,
+                  "height": 190
+                },
+                "attributes": [
+                  "dce85b4b-3399-4c9c-8bf4-ffede14a8eeb",
+                  "07545c2a-bcad-4ad1-bf10-78a874496c49",
+                  "b4798760-8a9d-4eb6-8ac3-ee11d857b119",
+                  "62675b21-7744-4e07-a16e-9361478d4860",
+                  "ff84bf1d-ab68-496d-9c19-50c9700f09ee"
+                ],
+                "methods": []
+              },
+              "dce85b4b-3399-4c9c-8bf4-ffede14a8eeb": {
+                "id": "dce85b4b-3399-4c9c-8bf4-ffede14a8eeb",
+                "name": "calculated_at",
+                "type": "ClassAttribute",
+                "owner": "2872cb2e-b5fe-4078-9c9e-d865914088b0",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 540.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "07545c2a-bcad-4ad1-bf10-78a874496c49": {
+                "id": "07545c2a-bcad-4ad1-bf10-78a874496c49",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "2872cb2e-b5fe-4078-9c9e-d865914088b0",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 570.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "b4798760-8a9d-4eb6-8ac3-ee11d857b119": {
+                "id": "b4798760-8a9d-4eb6-8ac3-ee11d857b119",
+                "name": "new_score",
+                "type": "ClassAttribute",
+                "owner": "2872cb2e-b5fe-4078-9c9e-d865914088b0",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 600.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "62675b21-7744-4e07-a16e-9361478d4860": {
+                "id": "62675b21-7744-4e07-a16e-9361478d4860",
+                "name": "old_score",
+                "type": "ClassAttribute",
+                "owner": "2872cb2e-b5fe-4078-9c9e-d865914088b0",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 630.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "ff84bf1d-ab68-496d-9c19-50c9700f09ee": {
+                "id": "ff84bf1d-ab68-496d-9c19-50c9700f09ee",
+                "name": "reason",
+                "type": "ClassAttribute",
+                "owner": "2872cb2e-b5fe-4078-9c9e-d865914088b0",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 660.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "0375f02a-b209-48eb-9aa7-65262063b273": {
+                "id": "0375f02a-b209-48eb-9aa7-65262063b273",
+                "name": "Tag",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": 0,
+                  "y": 500,
+                  "width": 160,
+                  "height": 130
+                },
+                "attributes": [
+                  "eaceb2c2-b251-4fbc-a151-d4fb62cd413e",
+                  "84e0dc89-fc61-4c4c-a589-2235c6ba440c",
+                  "760cd540-b9ce-4ba2-b37c-ee50b0e6916a"
+                ],
+                "methods": []
+              },
+              "eaceb2c2-b251-4fbc-a151-d4fb62cd413e": {
+                "id": "eaceb2c2-b251-4fbc-a151-d4fb62cd413e",
+                "name": "color",
+                "type": "ClassAttribute",
+                "owner": "0375f02a-b209-48eb-9aa7-65262063b273",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 540.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "84e0dc89-fc61-4c4c-a589-2235c6ba440c": {
+                "id": "84e0dc89-fc61-4c4c-a589-2235c6ba440c",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "0375f02a-b209-48eb-9aa7-65262063b273",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 570.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "760cd540-b9ce-4ba2-b37c-ee50b0e6916a": {
+                "id": "760cd540-b9ce-4ba2-b37c-ee50b0e6916a",
+                "name": "name",
+                "type": "ClassAttribute",
+                "owner": "0375f02a-b209-48eb-9aa7-65262063b273",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 600.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "b580eb01-cdd5-45c9-9444-f7d52442dd0c": {
+                "id": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                "name": "Task",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": -600,
+                  "y": 700,
+                  "width": 160,
+                  "height": 250
+                },
+                "attributes": [
+                  "d818b59c-693e-45cd-b6ee-131f029aae08",
+                  "edd44580-ba8d-4537-a09c-9522ebb2b742",
+                  "4b9ebc63-0c32-4855-985a-32b47189c7f7",
+                  "2eac27b4-3ff9-4f2d-bfc7-35596366df94",
+                  "fe57516c-47ba-4e20-bf72-61f4feaec5b4",
+                  "bf048dc5-3335-44c5-b7a6-a1e95e0f8574",
+                  "5eb0492b-619c-4b00-8fd9-cdd3a7c6f207"
+                ],
+                "methods": []
+              },
+              "d818b59c-693e-45cd-b6ee-131f029aae08": {
+                "id": "d818b59c-693e-45cd-b6ee-131f029aae08",
+                "name": "completed_at",
+                "type": "ClassAttribute",
+                "owner": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 740.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "edd44580-ba8d-4537-a09c-9522ebb2b742": {
+                "id": "edd44580-ba8d-4537-a09c-9522ebb2b742",
+                "name": "created_at",
+                "type": "ClassAttribute",
+                "owner": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 770.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "4b9ebc63-0c32-4855-985a-32b47189c7f7": {
+                "id": "4b9ebc63-0c32-4855-985a-32b47189c7f7",
+                "name": "description",
+                "type": "ClassAttribute",
+                "owner": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 800.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "2eac27b4-3ff9-4f2d-bfc7-35596366df94": {
+                "id": "2eac27b4-3ff9-4f2d-bfc7-35596366df94",
+                "name": "due_date",
+                "type": "ClassAttribute",
+                "owner": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 830.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "fe57516c-47ba-4e20-bf72-61f4feaec5b4": {
+                "id": "fe57516c-47ba-4e20-bf72-61f4feaec5b4",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 860.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "bf048dc5-3335-44c5-b7a6-a1e95e0f8574": {
+                "id": "bf048dc5-3335-44c5-b7a6-a1e95e0f8574",
+                "name": "is_completed",
+                "type": "ClassAttribute",
+                "owner": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 890.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "bool",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "5eb0492b-619c-4b00-8fd9-cdd3a7c6f207": {
+                "id": "5eb0492b-619c-4b00-8fd9-cdd3a7c6f207",
+                "name": "title",
+                "type": "ClassAttribute",
+                "owner": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                "bounds": {
+                  "x": -599.5,
+                  "y": 920.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "3f8e372f-8f14-4965-a515-d95121009c8b": {
+                "id": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "name": "User",
+                "type": "Class",
+                "owner": null,
+                "bounds": {
+                  "x": -300,
+                  "y": 700,
+                  "width": 160,
+                  "height": 310
+                },
+                "attributes": [
+                  "749b1c71-4122-48a8-80b7-b7d0cd6dd9b7",
+                  "ee43cd1d-50c6-4fb5-9119-8cb871c0fc09",
+                  "272c09a5-4284-4560-89ee-5a6f26557b36",
+                  "6a4ec08a-9bbb-4e9c-ad02-a4021792a46e",
+                  "b105fdb7-770a-467b-bd1d-509b5f98d470",
+                  "2572951c-9103-470f-b1d7-f71aea813070",
+                  "a2e1bc1c-924f-45fc-a967-523df0d84ed1",
+                  "a3c02518-1322-4ed4-ae4e-3fdc76c8d20f",
+                  "fd707a1c-fa1f-41d3-b18f-a5a8af27260b"
+                ],
+                "methods": []
+              },
+              "749b1c71-4122-48a8-80b7-b7d0cd6dd9b7": {
+                "id": "749b1c71-4122-48a8-80b7-b7d0cd6dd9b7",
+                "name": "created_at",
+                "type": "ClassAttribute",
+                "owner": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 740.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "ee43cd1d-50c6-4fb5-9119-8cb871c0fc09": {
+                "id": "ee43cd1d-50c6-4fb5-9119-8cb871c0fc09",
+                "name": "email",
+                "type": "ClassAttribute",
+                "owner": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 770.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "272c09a5-4284-4560-89ee-5a6f26557b36": {
+                "id": "272c09a5-4284-4560-89ee-5a6f26557b36",
+                "name": "first_name",
+                "type": "ClassAttribute",
+                "owner": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 800.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "6a4ec08a-9bbb-4e9c-ad02-a4021792a46e": {
+                "id": "6a4ec08a-9bbb-4e9c-ad02-a4021792a46e",
+                "name": "id",
+                "type": "ClassAttribute",
+                "owner": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 830.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "int",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": true,
+                "isExternalId": false
+              },
+              "b105fdb7-770a-467b-bd1d-509b5f98d470": {
+                "id": "b105fdb7-770a-467b-bd1d-509b5f98d470",
+                "name": "is_active",
+                "type": "ClassAttribute",
+                "owner": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 860.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "bool",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "2572951c-9103-470f-b1d7-f71aea813070": {
+                "id": "2572951c-9103-470f-b1d7-f71aea813070",
+                "name": "last_login",
+                "type": "ClassAttribute",
+                "owner": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 890.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "datetime",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "a2e1bc1c-924f-45fc-a967-523df0d84ed1": {
+                "id": "a2e1bc1c-924f-45fc-a967-523df0d84ed1",
+                "name": "last_name",
+                "type": "ClassAttribute",
+                "owner": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 920.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "a3c02518-1322-4ed4-ae4e-3fdc76c8d20f": {
+                "id": "a3c02518-1322-4ed4-ae4e-3fdc76c8d20f",
+                "name": "password_hash",
+                "type": "ClassAttribute",
+                "owner": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 950.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "fd707a1c-fa1f-41d3-b18f-a5a8af27260b": {
+                "id": "fd707a1c-fa1f-41d3-b18f-a5a8af27260b",
+                "name": "role",
+                "type": "ClassAttribute",
+                "owner": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                "bounds": {
+                  "x": -299.5,
+                  "y": 980.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "UserRole",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "59778391-1772-4b33-ad48-69c569b81db5": {
+                "id": "59778391-1772-4b33-ad48-69c569b81db5",
+                "name": "UserRole",
+                "type": "Enumeration",
+                "owner": null,
+                "bounds": {
+                  "x": 0,
+                  "y": 700,
+                  "width": 160,
+                  "height": 140
+                },
+                "attributes": [
+                  "898f11f7-227e-4b64-9ca2-e532e0020494",
+                  "56400df0-e1a8-44b0-86fb-ca7b0fd485d4",
+                  "b2cb507c-7633-49de-8541-6c266ac482c1"
+                ],
+                "methods": []
+              },
+              "898f11f7-227e-4b64-9ca2-e532e0020494": {
+                "id": "898f11f7-227e-4b64-9ca2-e532e0020494",
+                "name": "ADMIN",
+                "type": "ClassAttribute",
+                "owner": "59778391-1772-4b33-ad48-69c569b81db5",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 750.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "56400df0-e1a8-44b0-86fb-ca7b0fd485d4": {
+                "id": "56400df0-e1a8-44b0-86fb-ca7b0fd485d4",
+                "name": "SALES_MANAGER",
+                "type": "ClassAttribute",
+                "owner": "59778391-1772-4b33-ad48-69c569b81db5",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 780.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              },
+              "b2cb507c-7633-49de-8541-6c266ac482c1": {
+                "id": "b2cb507c-7633-49de-8541-6c266ac482c1",
+                "name": "SALES_REP",
+                "type": "ClassAttribute",
+                "owner": "59778391-1772-4b33-ad48-69c569b81db5",
+                "bounds": {
+                  "x": 0.5,
+                  "y": 810.5,
+                  "width": 159,
+                  "height": 30
+                },
+                "code": "",
+                "visibility": "public",
+                "attributeType": "str",
+                "implementationType": "none",
+                "stateMachineId": "",
+                "quantumCircuitId": "",
+                "neuralNetworkId": "",
+                "isOptional": false,
+                "isDerived": false,
+                "isId": false,
+                "isExternalId": false
+              }
+            },
+            "relationships": {
+              "6cbb07a8-924e-4ab2-a6fe-058ec4c003b1": {
+                "id": "6cbb07a8-924e-4ab2-a6fe-058ec4c003b1",
+                "name": "Company_Tag",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -650.3926086425781,
+                  "y": -150,
+                  "width": 759.5452728271484,
+                  "height": 660.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 730.3926086425781,
+                    "y": 650
+                  },
+                  {
+                    "x": 730.3926086425781,
+                    "y": 325
+                  },
+                  {
+                    "x": 140.39260864257812,
+                    "y": 325
+                  },
+                  {
+                    "x": 140.39260864257812,
+                    "y": 0
+                  }
+                ],
+                "source": {
+                  "direction": "Up",
+                  "element": "0375f02a-b209-48eb-9aa7-65262063b273",
+                  "multiplicity": "0..*",
+                  "role": "tags",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 500,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Down",
+                  "element": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                  "multiplicity": "0..*",
+                  "role": "tagged_companies",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -520,
+                    "y": 130,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "f4aeb046-16f7-4bb3-84fe-e17351217f9f": {
+                "id": "f4aeb046-16f7-4bb3-84fe-e17351217f9f",
+                "name": "Company_created_by_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -654.8222808837891,
+                  "y": -150,
+                  "width": 448.72853088378906,
+                  "height": 860.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 434.82228088378906,
+                    "y": 850
+                  },
+                  {
+                    "x": 434.82228088378906,
+                    "y": 425
+                  },
+                  {
+                    "x": 144.82228088378906,
+                    "y": 425
+                  },
+                  {
+                    "x": 144.82228088378906,
+                    "y": 0
+                  }
+                ],
+                "source": {
+                  "direction": "Up",
+                  "element": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                  "multiplicity": "1",
+                  "role": "created_by",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -220,
+                    "y": 700,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Down",
+                  "element": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                  "multiplicity": "0..*",
+                  "role": "created_companies",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -520,
+                    "y": 130,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "0a938c20-40e8-4470-9a80-365765498410": {
+                "id": "0a938c20-40e8-4470-9a80-365765498410",
+                "name": "Contact_Opportunity",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -16.79889678955078,
+                  "y": -50,
+                  "width": 445.9515609741211,
+                  "height": 360.18181800842285
+                },
+                "path": [
+                  {
+                    "x": 96.79889678955078,
+                    "y": 350
+                  },
+                  {
+                    "x": 96.79889678955078,
+                    "y": 175
+                  },
+                  {
+                    "x": 416.7988967895508,
+                    "y": 175
+                  },
+                  {
+                    "x": 416.7988967895508,
+                    "y": 0
+                  }
+                ],
+                "source": {
+                  "direction": "Up",
+                  "element": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                  "multiplicity": "0..*",
+                  "role": "opportunities",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 300,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Down",
+                  "element": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                  "multiplicity": "0..*",
+                  "role": "contacts",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 160,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "b101a76d-6d56-4fb3-b9a4-8a7fc1095269": {
+                "id": "b101a76d-6d56-4fb3-b9a4-8a7fc1095269",
+                "name": "Contact_company_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -430,
+                  "y": -340,
+                  "width": 750,
+                  "height": 49.18181800842285
+                },
+                "path": [
+                  {
+                    "x": 0,
+                    "y": 10
+                  },
+                  {
+                    "x": 750,
+                    "y": 10
+                  }
+                ],
+                "source": {
+                  "direction": "Right",
+                  "element": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                  "multiplicity": "0..1",
+                  "role": "company",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -440,
+                    "y": -85,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Left",
+                  "element": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                  "multiplicity": "0..*",
+                  "role": "contacts",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 0,
+                    "y": -70,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "e7c37770-749d-4b3a-af38-26ab05c50b27": {
+                "id": "e7c37770-749d-4b3a-af38-26ab05c50b27",
+                "name": "Contact_created_by_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -305.25487518310547,
+                  "y": -50,
+                  "width": 734.4075393676758,
+                  "height": 760.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 85.25487518310547,
+                    "y": 750
+                  },
+                  {
+                    "x": 85.25487518310547,
+                    "y": 375
+                  },
+                  {
+                    "x": 705.2548751831055,
+                    "y": 375
+                  },
+                  {
+                    "x": 705.2548751831055,
+                    "y": 0
+                  }
+                ],
+                "source": {
+                  "direction": "Up",
+                  "element": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                  "multiplicity": "1",
+                  "role": "created_by",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -220,
+                    "y": 700,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Down",
+                  "element": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                  "multiplicity": "0..*",
+                  "role": "created_contacts",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 160,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "e1974f6a-52f2-4dd9-a0ed-276a3666969b": {
+                "id": "e1974f6a-52f2-4dd9-a0ed-276a3666969b",
+                "name": "EmailTemplate_created_by_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -641.6817092895508,
+                  "y": 120,
+                  "width": 435.5879592895508,
+                  "height": 590.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 421.6817092895508,
+                    "y": 580
+                  },
+                  {
+                    "x": 421.6817092895508,
+                    "y": 290
+                  },
+                  {
+                    "x": 121.68170928955078,
+                    "y": 290
+                  },
+                  {
+                    "x": 121.68170928955078,
+                    "y": 0
+                  }
+                ],
+                "source": {
+                  "direction": "Up",
+                  "element": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                  "multiplicity": "1",
+                  "role": "created_by",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -220,
+                    "y": 700,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Down",
+                  "element": "bb9269c8-4af1-4e11-a0cc-fc896690c6ee",
+                  "multiplicity": "0..*",
+                  "role": "email_templates",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -520,
+                    "y": 120,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "0c4b408b-a49f-47d3-b1ac-8ccd229676a2": {
+                "id": "0c4b408b-a49f-47d3-b1ac-8ccd229676a2",
+                "name": "EnrichmentLog_contact_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -140,
+                  "y": -85,
+                  "width": 460,
+                  "height": 49.18181800842285
+                },
+                "path": [
+                  {
+                    "x": 460,
+                    "y": 10
+                  },
+                  {
+                    "x": 0,
+                    "y": 10
+                  }
+                ],
+                "source": {
+                  "direction": "Left",
+                  "element": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                  "multiplicity": "1",
+                  "role": "contact",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 0,
+                    "y": -70,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Right",
+                  "element": "81ee1836-3bec-4350-862d-a52e77199a03",
+                  "multiplicity": "0..*",
+                  "role": "enrichment_logs",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -140,
+                    "y": -5,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "f564b70c-f04a-4062-b69f-30dfc9f95c29": {
+                "id": "f564b70c-f04a-4062-b69f-30dfc9f95c29",
+                "name": "GeneratedEmail_contact_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -52.37699890136719,
+                  "y": -140,
+                  "width": 466.2832489013672,
+                  "height": 130
+                },
+                "path": [
+                  {
+                    "x": 452.3769989013672,
+                    "y": 90
+                  },
+                  {
+                    "x": 452.3769989013672,
+                    "y": 130
+                  },
+                  {
+                    "x": 292.3769989013672,
+                    "y": 130
+                  },
+                  {
+                    "x": 292.3769989013672,
+                    "y": 0
+                  },
+                  {
+                    "x": 132.3769989013672,
+                    "y": 0
+                  },
+                  {
+                    "x": 132.3769989013672,
+                    "y": 40
+                  }
+                ],
+                "source": {
+                  "direction": "Down",
+                  "element": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                  "multiplicity": "1",
+                  "role": "contact",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 160,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Up",
+                  "element": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                  "multiplicity": "0..*",
+                  "role": "generated_emails",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": -100,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "f5d5df96-2da5-4a71-86cc-6c58a2c9c594": {
+                "id": "f5d5df96-2da5-4a71-86cc-6c58a2c9c594",
+                "name": "GeneratedEmail_created_by_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -305.25487518310547,
+                  "y": 120,
+                  "width": 414.4075393676758,
+                  "height": 590.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 85.25487518310547,
+                    "y": 580
+                  },
+                  {
+                    "x": 85.25487518310547,
+                    "y": 290
+                  },
+                  {
+                    "x": 385.25487518310547,
+                    "y": 290
+                  },
+                  {
+                    "x": 385.25487518310547,
+                    "y": 0
+                  }
+                ],
+                "source": {
+                  "direction": "Up",
+                  "element": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                  "multiplicity": "1",
+                  "role": "created_by",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -220,
+                    "y": 700,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Down",
+                  "element": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                  "multiplicity": "0..*",
+                  "role": "generated_emails",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 120,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "95d70044-7308-4472-bc14-ec118f89e85e": {
+                "id": "95d70044-7308-4472-bc14-ec118f89e85e",
+                "name": "GeneratedEmail_template_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -440,
+                  "y": 0,
+                  "width": 440,
+                  "height": 49.18181800842285
+                },
+                "path": [
+                  {
+                    "x": 0,
+                    "y": 10
+                  },
+                  {
+                    "x": 440,
+                    "y": 10
+                  }
+                ],
+                "source": {
+                  "direction": "Right",
+                  "element": "bb9269c8-4af1-4e11-a0cc-fc896690c6ee",
+                  "multiplicity": "0..1",
+                  "role": "template",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -440,
+                    "y": 10,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Left",
+                  "element": "1a2d9a22-4389-4145-a9b7-431072f61ee1",
+                  "multiplicity": "0..*",
+                  "role": "generated_emails",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 0,
+                    "y": 10,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "04b4aa75-87d3-4826-93d4-71e6f95cf77f": {
+                "id": "04b4aa75-87d3-4826-93d4-71e6f95cf77f",
+                "name": "Interaction_contact_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -140,
+                  "y": -290,
+                  "width": 460,
+                  "height": 554.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 460,
+                    "y": 10
+                  },
+                  {
+                    "x": 230,
+                    "y": 10
+                  },
+                  {
+                    "x": 230,
+                    "y": 515
+                  },
+                  {
+                    "x": 0,
+                    "y": 515
+                  }
+                ],
+                "source": {
+                  "direction": "Left",
+                  "element": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                  "multiplicity": "1",
+                  "role": "contact",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 0,
+                    "y": -70,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Right",
+                  "element": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                  "multiplicity": "0..*",
+                  "role": "interactions",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -140,
+                    "y": 225,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "215a8fee-795c-431d-99f9-1233c4e7d498": {
+                "id": "215a8fee-795c-431d-99f9-1233c4e7d498",
+                "name": "Interaction_performed_by_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -324.80955505371094,
+                  "y": 350,
+                  "width": 133.96221923828125,
+                  "height": 360.18181800842285
+                },
+                "path": [
+                  {
+                    "x": 104.80955505371094,
+                    "y": 350
+                  },
+                  {
+                    "x": 104.80955505371094,
+                    "y": 0
+                  }
+                ],
+                "source": {
+                  "direction": "Up",
+                  "element": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                  "multiplicity": "1",
+                  "role": "performed_by",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -220,
+                    "y": 700,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Down",
+                  "element": "95b5e4c7-4914-44e9-af2f-ada43a94153b",
+                  "multiplicity": "0..*",
+                  "role": "interactions",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -220,
+                    "y": 350,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "4d2c16a9-3409-4973-87d2-418396352c68": {
+                "id": "4d2c16a9-3409-4973-87d2-418396352c68",
+                "name": "Opportunity_company_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -430,
+                  "y": -375,
+                  "width": 430,
+                  "height": 884.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 0,
+                    "y": 10
+                  },
+                  {
+                    "x": 215,
+                    "y": 10
+                  },
+                  {
+                    "x": 215,
+                    "y": 845
+                  },
+                  {
+                    "x": 430,
+                    "y": 845
+                  }
+                ],
+                "source": {
+                  "direction": "Right",
+                  "element": "24c5de5e-3079-4f91-9cc7-09cd323d3ac4",
+                  "multiplicity": "0..1",
+                  "role": "company",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -440,
+                    "y": -85,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Left",
+                  "element": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                  "multiplicity": "0..*",
+                  "role": "opportunities",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 0,
+                    "y": 470,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "5cf27fb0-f592-4e53-b7eb-407b52b1218a": {
+                "id": "5cf27fb0-f592-4e53-b7eb-407b52b1218a",
+                "name": "Opportunity_owner_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -269.6135902404785,
+                  "y": 640,
+                  "width": 378.7662544250488,
+                  "height": 70.18181800842285
+                },
+                "path": [
+                  {
+                    "x": 49.613590240478516,
+                    "y": 60
+                  },
+                  {
+                    "x": 49.613590240478516,
+                    "y": 20
+                  },
+                  {
+                    "x": 199.61359024047852,
+                    "y": 20
+                  },
+                  {
+                    "x": 199.61359024047852,
+                    "y": 40
+                  },
+                  {
+                    "x": 349.6135902404785,
+                    "y": 40
+                  },
+                  {
+                    "x": 349.6135902404785,
+                    "y": 0
+                  }
+                ],
+                "source": {
+                  "direction": "Up",
+                  "element": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                  "multiplicity": "1",
+                  "role": "owner",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -220,
+                    "y": 700,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Down",
+                  "element": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                  "multiplicity": "0..*",
+                  "role": "owned_opportunities",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 640,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "8ab26908-466a-4df6-b50b-b90b9310d3da": {
+                "id": "8ab26908-466a-4df6-b50b-b90b9310d3da",
+                "name": "ScoreHistory_contact_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -321.2392349243164,
+                  "y": -50,
+                  "width": 735.1454849243164,
+                  "height": 560.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 721.2392349243164,
+                    "y": 0
+                  },
+                  {
+                    "x": 721.2392349243164,
+                    "y": 275
+                  },
+                  {
+                    "x": 101.2392349243164,
+                    "y": 275
+                  },
+                  {
+                    "x": 101.2392349243164,
+                    "y": 550
+                  }
+                ],
+                "source": {
+                  "direction": "Down",
+                  "element": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                  "multiplicity": "1",
+                  "role": "contact",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 160,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Up",
+                  "element": "2872cb2e-b5fe-4078-9c9e-d865914088b0",
+                  "multiplicity": "0..*",
+                  "role": "score_history",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -220,
+                    "y": 500,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "02b38f85-b10a-4833-ba75-c05f8022b575": {
+                "id": "02b38f85-b10a-4833-ba75-c05f8022b575",
+                "name": "Tag_Contact",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": 44.57602882385254,
+                  "y": -50,
+                  "width": 384.5766353607178,
+                  "height": 560.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 355.42397117614746,
+                    "y": 0
+                  },
+                  {
+                    "x": 355.42397117614746,
+                    "y": 275
+                  },
+                  {
+                    "x": 35.42397117614746,
+                    "y": 275
+                  },
+                  {
+                    "x": 35.42397117614746,
+                    "y": 550
+                  }
+                ],
+                "source": {
+                  "direction": "Down",
+                  "element": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                  "multiplicity": "0..*",
+                  "role": "tagged_contacts",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 160,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Up",
+                  "element": "0375f02a-b209-48eb-9aa7-65262063b273",
+                  "multiplicity": "0..*",
+                  "role": "tags",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 500,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "d9aeb9ab-9d1d-44e0-bb75-de3d7c0131ff": {
+                "id": "d9aeb9ab-9d1d-44e0-bb75-de3d7c0131ff",
+                "name": "Task_assigned_to_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -440,
+                  "y": 815,
+                  "width": 140,
+                  "height": 49.18181800842285
+                },
+                "path": [
+                  {
+                    "x": 140,
+                    "y": 10
+                  },
+                  {
+                    "x": 0,
+                    "y": 10
+                  }
+                ],
+                "source": {
+                  "direction": "Left",
+                  "element": "3f8e372f-8f14-4965-a515-d95121009c8b",
+                  "multiplicity": "1",
+                  "role": "assigned_to",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -300,
+                    "y": 855,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Right",
+                  "element": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                  "multiplicity": "0..*",
+                  "role": "tasks",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -440,
+                    "y": 825,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "a84c3111-38d9-4540-8bb6-bf402b2c3585": {
+                "id": "a84c3111-38d9-4540-8bb6-bf402b2c3585",
+                "name": "Task_contact_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -562.5255241394043,
+                  "y": -50,
+                  "width": 994.2158641815186,
+                  "height": 760.1818180084229
+                },
+                "path": [
+                  {
+                    "x": 962.5255241394043,
+                    "y": 0
+                  },
+                  {
+                    "x": 962.5255241394043,
+                    "y": 375
+                  },
+                  {
+                    "x": 42.5255241394043,
+                    "y": 375
+                  },
+                  {
+                    "x": 42.5255241394043,
+                    "y": 750
+                  }
+                ],
+                "source": {
+                  "direction": "Down",
+                  "element": "b9d2c2d8-ac98-4fb3-8c98-31f9f070d17e",
+                  "multiplicity": "0..1",
+                  "role": "contact",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 80,
+                    "y": 160,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Up",
+                  "element": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                  "multiplicity": "0..*",
+                  "role": "tasks",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -520,
+                    "y": 700,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              },
+              "d8d5777c-079e-45fa-b8b4-1a57d26cce9c": {
+                "id": "d8d5777c-079e-45fa-b8b4-1a57d26cce9c",
+                "name": "Task_opportunity_id",
+                "type": "ClassBidirectional",
+                "owner": null,
+                "bounds": {
+                  "x": -440,
+                  "y": 460,
+                  "width": 440,
+                  "height": 404.18181800842285
+                },
+                "path": [
+                  {
+                    "x": 440,
+                    "y": 10
+                  },
+                  {
+                    "x": 220,
+                    "y": 10
+                  },
+                  {
+                    "x": 220,
+                    "y": 365
+                  },
+                  {
+                    "x": 0,
+                    "y": 365
+                  }
+                ],
+                "source": {
+                  "direction": "Left",
+                  "element": "5d18ff8b-f4e3-4d71-a077-ea12fd05ae3a",
+                  "multiplicity": "0..1",
+                  "role": "opportunity",
+                  "navigable": true,
+                  "bounds": {
+                    "x": 0,
+                    "y": 470,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "target": {
+                  "direction": "Right",
+                  "element": "b580eb01-cdd5-45c9-9444-f7d52442dd0c",
+                  "multiplicity": "0..*",
+                  "role": "tasks",
+                  "navigable": true,
+                  "bounds": {
+                    "x": -440,
+                    "y": 825,
+                    "width": 0,
+                    "height": 0
+                  }
+                },
+                "isManuallyLayouted": false
+              }
+            },
+            "assessments": {}
+          },
+          "lastUpdate": "2026-10-30T11:43:24.071Z"
+        }
+      ]
+    },
+    "settings": {
+      "defaultDiagramType": "ClassDiagram",
+      "autoSave": true,
+      "collaborationEnabled": false,
+      "perspectives": {
+        "ClassDiagram": true,
+        "ObjectDiagram": true,
+        "StateMachineDiagram": true,
+        "AgentDiagram": true,
+        "UserDiagram": true,
+        "GUINoCodeDiagram": true,
+        "QuantumCircuitDiagram": true,
+        "NNDiagram": true,
+        "BPMN": true,
+        "ComponentDiagram": true,
+        "DeploymentDiagram": true,
+        "KnowledgeGraphDiagram": true
+      }
+    },
+    "schemaVersion": 6
+  },
+  "exportedAt": "2026-10-30T11:43:24.072Z",
+  "version": "2.0.0",
+  "editorVersion": "1.0.0"
+}
